@@ -1,4 +1,6 @@
-﻿var fullInput =
+﻿using System;
+
+var fullInput =
 @"";
 
 var smallInput =
@@ -15,16 +17,13 @@ var result = 0;
 
 int position = 0;
 int stepsTaken = 0;
-int targetSteps = 6;
+int targetSteps = 12134527;
 var tape = new Dictionary<int, bool>();
 
-try
+object methodResult = A;
+for (int i = 0; i < targetSteps; i++)
 {
-    A();
-}
-catch
-{
-
+    methodResult = ((Func<object>)methodResult)();
 }
 
 result = tape.Count(x => x.Value);
@@ -45,37 +44,35 @@ void PrintGrid<T>(T[][] grid)
     }
 }
 
-void A()
+object A()
 {
-    stepsTaken++; if (stepsTaken > targetSteps) { throw new Exception(); }
     if (!GetValue())
     {
         WriteValue(true);
         MoveRight();
-        B();
+        return B;
     }
     else
     {
         WriteValue(false);
         MoveLeft();
-        B();
+        return B;
     }
 }
 
-void B()
+object B()
 {
-    stepsTaken++; if (stepsTaken > targetSteps) { throw new Exception(); }
     if (!GetValue())
     {
         WriteValue(true);
         MoveLeft();
-        A();
+        return A;
     }
     else
     {
         WriteValue(true);
         MoveRight();
-        A();
+        return A;
     }
 }
 
