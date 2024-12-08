@@ -56,7 +56,7 @@ object A()
     {
         WriteValue(false);
         MoveLeft();
-        return B;
+        return C;
     }
 }
 
@@ -72,7 +72,71 @@ object B()
     {
         WriteValue(true);
         MoveRight();
+        return C;
+    }
+}
+
+object C()
+{
+    if (!GetValue())
+    {
+        WriteValue(true);
+        MoveRight();
         return A;
+    }
+    else
+    {
+        WriteValue(false);
+        MoveLeft();
+        return D;
+    }
+}
+
+object D()
+{
+    if (!GetValue())
+    {
+        WriteValue(true);
+        MoveLeft();
+        return E;
+    }
+    else
+    {
+        WriteValue(true);
+        MoveLeft();
+        return C;
+    }
+}
+
+object E()
+{
+    if (!GetValue())
+    {
+        WriteValue(true);
+        MoveRight();
+        return F;
+    }
+    else
+    {
+        WriteValue(true);
+        MoveRight();
+        return A;
+    }
+}
+
+object F()
+{
+    if (!GetValue())
+    {
+        WriteValue(true);
+        MoveRight();
+        return A;
+    }
+    else
+    {
+        WriteValue(true);
+        MoveRight();
+        return E;
     }
 }
 
