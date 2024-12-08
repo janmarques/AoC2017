@@ -15,7 +15,7 @@ var result = 0;
 
 for (int i = 0; i < input.Length; i++)
 {
-    if (input[i] == input[(i + 1) % input.Length])
+    if (input[i] == input[(i + (input.Length / 2)) % input.Length])
     {
         result += int.Parse(input[i].ToString());
     }
