@@ -1,4 +1,7 @@
-﻿var fullInput =
+﻿
+using AoC2024;
+
+var fullInput =
 @"62	1649	1731	76	51	1295	349	719	52	1984	2015	2171	981	1809	181	1715
 161	99	1506	1658	84	78	533	242	1685	86	107	1548	670	960	1641	610
 95	2420	2404	2293	542	2107	2198	121	109	209	2759	1373	1446	905	1837	111
@@ -32,7 +35,19 @@ var result = 0;
 
 var numbers = input.Split(Environment.NewLine).Select(x => x.Replace("\t", " ").Split(" ").Select(int.Parse).OrderBy(x => x).ToList()).ToList();
 
-result = numbers.Sum(x => x.Last() - x.First());
+result = numbers.Sum(Divisible);
+
+int Divisible(List<int> list)
+{
+    Utils.AllCombinations(list, (a, b) =>
+    {
+        if (b % a == 0)
+        {
+            result = (int)(b / a);
+        }
+    });
+    return result;
+}
 
 timer.Stop();
 Console.WriteLine(result);

@@ -209,11 +209,11 @@ public static class Utils
         }
     }
 
-    public static void AllCombinations<T>(IEnumerable<T> grid, Action<T, T> action) where T : class
+    public static void AllCombinations<T>(IEnumerable<T> grid, Action<T, T> action)
     {
         foreach (var item in grid)
         {
-            foreach (var other in grid.SkipWhile(x => x != item).Skip(1))
+            foreach (var other in grid.Except([item]).Skip(1))
             {
                 action(item, other);
             }
