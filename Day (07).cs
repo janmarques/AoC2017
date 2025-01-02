@@ -1,1125 +1,1150 @@
-﻿//using System.Collections.Generic;
-//using System.Collections.Specialized;
+﻿var fullInput =
+@"apcztdj (61)
+ulovosc (61) -> buzjgp, iimyluk
+awpvs (88)
+ykbjhi (14)
+gxvketg (49)
+gpmvdo (78) -> jjixrr, zacrh, smylfq, fdvtn
+nwpmqu (6025) -> aytrde, grokih, pjqaa, nzzved
+keiakhg (50)
+vkrlz (22)
+myzkj (40)
+zkzpbbp (46)
+eaumqtc (288) -> tvmvvxn, ckcpovl
+htlovrb (1662) -> atxtq, ewsqqum, mjwviex
+aoxky (53873) -> orzwmml, tcvtul, ygszhn
+uhfiqwc (81)
+gziopi (189) -> hboommj, glbipl, evojkum
+rjksjq (66)
+rwyzrl (1434) -> geiethw, nclvb, riphudi
+gmusjd (98)
+vjmwzo (76)
+xymsu (153) -> kbgmlab, yjjewyt
+mgiumh (64)
+cnfcuww (40)
+pgeoixp (211) -> qgrtg, svtcvi, rutmxs
+zwwpva (89)
+otgnir (87)
+vxftbc (60)
+xxpfmp (32) -> cnqemd, jmujchg, yfolyk, zalahl
+tcrcyis (1098) -> tyealpm, dirvqby
+ffjshhj (65)
+powwpec (23)
+gudpriq (171) -> zqxyn, bwxgrhf, dclnnlg
+nzrbmfg (7)
+fgptt (210)
+hpcafa (91)
+urepv (2628) -> qzcqhsk, iqeynjk, fakqhi
+qzcqhsk (516) -> ujjksl, qccwy, cddbi, cvpoqqk, nnhlcn
+riphudi (35)
+nwtvzap (101) -> iwumx, bpazmfd
+xhxctp (84)
+dkpmgrq (94)
+rvftpif (5)
+iqeap (27)
+aplauwh (693) -> rjkzf, nfvns, snhww
+iayrwd (81) -> beidb, lpjxpx, mtvxp, alcfp
+nsuysii (86) -> aktzpym, gdckok
+zbxbe (59) -> ahwtsi, uqjcaa
+yhiwu (37)
+qpcmzl (28)
+jmujchg (48)
+germn (218) -> mbdwm, kjxac
+mxsvay (328) -> stuom, twgcf, mexagfy
+sneog (20)
+rkczq (180) -> mdfae, rrsfv, yycys
+nnbfqh (819) -> guttanj, htmjx, rwlmsx
+nxzafkd (60)
+tptdvct (64)
+mokvas (49) -> ygfcl, xxitunl
+wcztr (133) -> chxurcq, hemhd, siwvncp
+satie (61)
+vcjpuw (43)
+hzcmmh (90) -> ivbwdn, eknlt, nzfjwtq, hwcbsyu, gejaump, xymsu, ebtoke
+jimigk (68)
+vzfebn (196) -> elqlx, lkffdz
+lcwpm (1946) -> jwjuylx, pjmwkz, geajywv, zyqfc
+iimyluk (65)
+zcgaxsi (49)
+elhmwsx (92)
+bxsxr (189) -> msowvgh, zjxlr, yylzxb
+qgrtg (14)
+gnupj (74)
+aktzpym (72)
+gvuwq (88)
+iojjekn (160) -> gnhcs, homrc
+gzdtco (88)
+ospfv (5)
+epovby (14)
+jflns (39)
+hmqam (161) -> tkiheq, flrtvno
+koxyrpn (94)
+witxvcj (44)
+pseltr (70) -> bzqmgl, vlmzfaf
+yrotnfh (68)
+fyqlqkg (19) -> gicwtf, dlxubg, ysrwm, qjnela, djupte, rayzwrp, mgexekz
+eipyu (84)
+hacgqe (54)
+nssvbj (5)
+maugts (7) -> owizuw, dopwkoo, nnbfqh, rwyzrl, kkfio, gzpcl
+uiclmg (14)
+psyem (173) -> tbxxc, bodpwem, lfhmte, pyobp, znnjzzw, pcnbkxm, tolty
+rskopr (68)
+mhihjb (68)
+bfkpjdl (150) -> mpbui, qcqpavg, lwmblwr
+ezotk (50)
+dyadgtm (7) -> zcvzrja, rifmmf
+npipd (20)
+ozqsvif (231) -> stketdd, jpedzjk, vrpoaq, hbollnl
+lxshx (67) -> peocao, vqsxe, tstuc, pqwzgz, ycuajn
+kdersld (98) -> nrarwj, ajyyjfx
+ontcbns (111) -> jptxyhp, zwwpva, ndoecxy
+vyzksry (99)
+sxygbpo (27)
+owayyaw (5346) -> ykvqh, ruejmc, oqrvpt, qmvebxb, macxvi
+paqzzv (60) -> nujgng, krnjk
+qhutc (168) -> ykbjhi, uiclmg
+ofndvr (46)
+vfgomle (56)
+znkru (32)
+eymsjfd (31)
+dvetl (124) -> kdccrl, rtsji
+pvdbhh (96)
+ggilocf (55)
+wjjmh (36)
+zqxyn (14)
+qweyxa (32)
+tiirxay (9)
+avsse (292) -> wchlqxi, griwu
+fmtox (6) -> mrflo, ikpyx, tsfrlzw
+qczgclr (90)
+tajeklj (151) -> kmrbuvq, hiaoc
+kxtzbj (49)
+dopwkoo (990) -> hnrwa, nwtvzap, ruitlxx
+gyqrut (1431) -> pykcza, kxxhn, tipdlf
+eknlt (177) -> erphv, dhahfgv
+pnpge (49)
+teeunu (4569) -> hirvz, mkpgx, dnflzcz
+kkfio (207) -> iayrwd, abofflv, cpsmrch, ndtcui
+wkdxdem (78)
+dnslk (50)
+civkkh (38)
+bzqmgl (91)
+gxtnep (43)
+hemhd (54)
+nzzved (110) -> vexun, sekcqad
+tnejqkf (47)
+jenxqco (14)
+tlsdvhf (79)
+kcltvch (65)
+tqyheu (18)
+csoko (1055) -> hnwpfl, rstsr, icnwzox
+jmgsk (54)
+rayzwrp (244) -> pydrzyk, hbomk
+dmqhi (31)
+wsctytx (26)
+kjxac (65)
+vrryj (177) -> nssvbj, gzlfqg
+vmvdhds (33)
+iuuve (90)
+wbugvc (938) -> hpmynx, cznyy, yjqbsxx, yzcddkw
+hnrwa (78) -> fbzro, iempnd, ojrsv
+inojzm (100) -> zxlfwi, homdmyc
+cvvex (75)
+thumfdk (365) -> hcvvfm, oyuklmp, vtnddpz, egzpkj
+wkqnq (8)
+ulcnxii (59)
+kdccrl (96)
+hpmynx (112) -> kdmprsg, jvdawi
+iempnd (35)
+rqzkom (305) -> bvdqhfs, ubiuve, vqlqq
+stuom (189) -> tffhcft, lzwplw
+bjqzgqj (75)
+ygfcl (69)
+qakcvf (117) -> udvdho, gxtnep
+vxlonb (88)
+tjlsmrz (18) -> pmznzoa, dtifm
+golth (22)
+xdmqa (18)
+xsilcvz (92)
+oudxhh (81)
+homdmyc (25)
+zyrztc (15)
+mmngri (60)
+vqsxe (220) -> prxex, jhggy, zkmdfh
+lyeoeff (74)
+mcnek (54)
+ckcpovl (55)
+vqmeer (359) -> ijbth, phoic
+zhgql (35)
+zalahl (48)
+toccxvy (58) -> ryecm, embmhv, wutkvkd, qlxioka
+sgvbpct (13)
+ubaaa (2460) -> ivkvhf, tjzut
+yxmycw (1258) -> mokvas, lzcant, vrryj
+mxtqhi (286) -> jwpbg, kizufjn
+ofqav (13)
+gqpqzrh (49)
+jgjbcux (23)
+vojblx (143) -> ytcgcq, bltsiq
+qrbiq (7)
+qnofu (64)
+tcvtul (372) -> vxlonb, xcvdoi
+spcpfe (255) -> tseydw, cfdumg
+ohyhw (153) -> xttop, hnocmo
+dqpcn (310) -> witxvcj, qshxib
+btxts (816) -> klgsp, thumfdk, kbothlh
+ezptzx (86)
+dtifm (68)
+gicwtf (254) -> beocjuy, kgfums
+wvawj (59)
+cddbi (255) -> ekrym, cysyc
+rimlwoh (64)
+wutkvkd (25)
+hqlni (74)
+vwzein (18)
+nxrlaw (74)
+nhrla (34394) -> idfyy, nwpmqu, owayyaw
+whotly (17)
+prxex (5)
+mkpgx (468) -> thunt, lujir, xjoid
+qmklslb (19)
+lokvk (67)
+xecai (12)
+mucnt (77)
+daaldt (68)
+rtatr (142) -> xkjzrg, btufku
+hpouwfs (22)
+nclvb (35)
+dnirbtx (49)
+pykcza (52) -> gkbpz, vzbywuf
+djplc (18)
+hflkio (88) -> elhmwsx, iovcix, twffuag, sygcnhv
+nkdtsf (33)
+cvzvo (139) -> gfrwxw, gjphrw
+ilgee (25)
+zyajdwf (273) -> eymsjfd, dmqhi
+rwlmsx (212) -> djsbpg, qrbiq, fnsceun, tdymtd
+uhwtkvo (66)
+hzzlebr (20)
+mundgs (93)
+ytjaofr (149) -> hmfvzi, bzplleg
+epbevf (26)
+ptydckb (47)
+hjuzxv (74)
+eljbay (138) -> rntsalv, llpxo
+kvnom (87)
+qvdrme (205) -> ffjshhj, kcltvch
+zbwrrsc (68)
+jmifnxw (42)
+pfojn (42)
+wgdrxl (85) -> notot, jogicnh
+wxzenj (224) -> swojvy, sidmmmy
+iekjt (91)
+quhxdb (28)
+pydrzyk (50)
+hboommj (21)
+vbiyre (65) -> kdrmsgh, lngffo, dqyifwc
+sqehayt (1007) -> vyzpzww, hmqam, qakcvf, dyadgtm
+keuqd (30) -> zrypv, zogeax, yyjfus
+tyjzoq (24) -> utvyxj, pwuhv, ombqq, inattlb
+xbfmp (37)
+aytrde (56) -> hfvkmf, vyzksry
+oufikpd (23)
+qpfybmv (189) -> znkru, cjlvlm
+hgsdq (288) -> bvxiqzm, jmifnxw, pfojn, bltkr
+nopjkom (1447) -> ayxuibs, krcntq, hbbhm, rehezo
+wtnmryv (92)
+mexagfy (235) -> leoti, uqwbtx
+bmsje (87)
+jkoyzxm (32)
+egzpkj (12)
+hirvz (774) -> cmhoj, eljbay, inojzm
+mxdluii (90)
+unuwu (41)
+ekuohb (24)
+xzqgkqn (87) -> mbqdugj, lujurf
+rzehh (98)
+dqqyiwm (61)
+oqialc (192) -> uhptzfg, quhxdb
+jwjuylx (63)
+ebwifj (14)
+grkauy (39)
+hvizfxx (83)
+pyxypca (64)
+gdckok (72)
+yccfitx (69)
+eisyowo (83) -> jjzbzsb, vbiyre, oqialc, uzxjxjx, tgjdv, ydhoryg, kdersld
+mjwviex (79) -> gnupj, lazcc
+grokih (202) -> wsctytx, qvksmrd
+vpfoaw (36)
+wtxndn (94)
+lazcc (74)
+pxzzw (55) -> dhccilz, rvzppdg, qcwhzgo, htlovrb
+jjzbzsb (88) -> cnfcuww, gtitbbk, myzkj, rfsrdn
+hrjil (71) -> ftmftoa, vdekve, lizqvr, rtkydv
+ddblq (28)
+eedxiav (257) -> jdeqa, tbmflh, zpjxsi, kgamsy
+ywxionz (239) -> gdkll, xecai
+ateol (34)
+hlcahpm (90)
+rntsalv (6)
+zcvzrja (98)
+kbbyj (87)
+btufku (80)
+hygdtn (7)
+yxbwlf (98)
+ivkvhf (9)
+mevvf (60)
+jdeqa (28)
+jhdmh (956) -> qkilfj, xzzar, gkqrml
+qlpft (57)
+delev (30)
+ndoecxy (89)
+lfhmte (334) -> qmklslb, ekcuavb
+fakqhi (1370) -> kqhggwy, zvpaj, zbxbe
+mzvjxgp (41)
+xuqhpz (49)
+rkfknhv (28)
+fbzro (35)
+vrmevdy (35)
+mysslj (49)
+aobgmc (341) -> tajeklj, rkczq, ohyhw, zceovs, gudpriq
+cocplr (67) -> opczxnj, ulcnxii, hjqvntn, wvawj
+fnsceun (7)
+yjqbsxx (122) -> ybtkkgv, fgyjop
+atxtq (181) -> oufikpd, czacja
+qvksmrd (26)
+gqmjvky (137) -> xvhnaf, cwspi
+bpusqb (84)
+ftmftoa (101) -> nlixy, mckkn, rpbawy
+aqshqpo (56)
+xsnmq (46)
+bltsiq (80)
+towwl (54)
+anhldnx (2024) -> kvnom, jbprgm
+ksioqg (8)
+nnunune (227) -> jmgsk, mefyd
+jvdawi (56)
+icnwzox (236)
+qiikh (127) -> zmveluw, ycncnr
+pjmwkz (63)
+pvqid (50)
+fivcv (64) -> pyydxvi, tzoefdo
+zacrh (44)
+smylfq (44)
+qcwhzgo (2040) -> aetlth, kqbrwt, ualcokx
+uwauv (196) -> daojy, sfyqi
+mjfbr (910) -> ruuovw, kghzy, psyem
+efcff (79)
+kzflj (19)
+shethb (91) -> qsgpsfr, fmtox, pseltr, gziopi, ohqlwmr
+yylzxb (6)
+ybtkkgv (51)
+olxmnkc (79) -> wtnmryv, encean
+cysyc (8)
+tkiheq (21)
+xkjzrg (80)
+vtnddpz (12)
+kgfums (45)
+rrlwo (41)
+rujggz (68)
+beidb (63)
+xcvdoi (88)
+xghng (17)
+vmoqov (43)
+pekzuyh (29)
+fheklq (66) -> crdlymr, vgsuq, lqspkzw, wbugvc
+wodhzc (18)
+rlzbv (92)
+ycuajn (185) -> iizggi, ilgee
+zjrpxp (73)
+sogepf (66)
+gbecv (78) -> hlcahpm, mxdluii, qczgclr
+xzvbcms (92)
+wcklpgi (14)
+wuhossn (96)
+dlrfwee (35)
+rfsrdn (40)
+akkrsv (108) -> ontcbns, mrydp, flqjd
+uqjcaa (54)
+ixcxv (49) -> ruvrw, rwqjiz, towwl
+kdrmsgh (61)
+gtxlyzz (32)
+udvdho (43)
+lelvcai (28)
+ivbwdn (121) -> hpocx, bwpqytq
+bvdqhfs (6)
+wrxzti (62)
+yoofo (79)
+oqrvpt (323) -> pyjzb, wkqnq
+bfxdtkg (93)
+yrmmga (36)
+tvmvvxn (55)
+hlhpm (187) -> xqnan, ykubvpo, bxsxr
+ovalfky (66)
+wpner (54)
+gljri (96)
+jpedzjk (153) -> byphua, nxzafkd, ccpek
+ydhoryg (65) -> apcztdj, wfuxy, satie
+zxsgnx (105) -> pnumlg, gouyeqw
+zyqfc (63)
+evxjdeo (57)
+uspfk (54)
+rwqjiz (54)
+griwu (72)
+mcgaqx (68)
+iqzkp (103) -> rkfknhv, lelvcai
+edmsh (77)
+uavzab (17)
+seleq (87)
+wsozlg (7)
+dgvvi (93)
+svbmkbx (196) -> golth, casbq
+szoomk (26)
+bcima (78)
+cyasn (4978) -> hlhpm, fmmhxab, chirgx
+hfvkmf (99)
+fjonxe (73) -> xbfmp, yhiwu, kxchm
+wnoer (81)
+zaouq (96)
+gkqrml (109) -> umitnao, bkcgx
+ppythr (73)
+qozshd (14)
+namzem (66)
+cjlvlm (32)
+ohcfrxm (85) -> xhxctp, wxpmbu
+iqwspxd (897) -> gqmjvky, wyzmc, mbzme
+chirgx (46) -> gpmvdo, fivcv, aelsfhi
+pyobp (78) -> gmusjd, pqfnj, xbhcwe
+kspoky (9)
+gtkqi (56) -> cquptt, cdeji
+twgcf (49) -> lokvk, cpxwa, yovtgg, nzzwed
+plsic (60)
+pmyqol (66) -> ayixid, efcff
+hnmba (22)
+ktbtfdb (56)
+yyjfus (85)
+rvzppdg (45) -> airnuh, mfvqvf, begmhqg, cykvv, wipzuag, fmstmh
+vebyb (30)
+yasoqri (41)
+gjphrw (85)
+caqjohx (25)
+oqiynm (9)
+lydynp (73)
+dclnnlg (14)
+nocugh (81)
+tqzbg (15)
+elqlx (81)
+mckkn (67)
+lujir (152) -> pvqid, keiakhg
+mywhdsm (47)
+oafxzu (27)
+fgumszu (98)
+hnwpfl (89) -> gqpqzrh, nlrwlj, gxvketg
+xrvno (49)
+kjdjj (225) -> keuqd, yompk, grxqt, ocxbgp
+vyzpzww (163) -> npipd, hzzlebr
+oqzcbx (81) -> wuhossn, ebhag, zaouq
+twffuag (92)
+nujgng (82)
+xbhcwe (98)
+bvugv (199) -> xdmqa, qqszul, wodhzc
+vgsuq (1510) -> oanoax, swcxes, qmelelp
+cwflw (27)
+yraktfn (27236) -> pxzzw, igwew, jjzlrku
+iqeynjk (17) -> dccvh, cvzvo, kcjujcr, phqplx, spcpfe, dygrnnf
+vgowu (30) -> mgiumh, pyxypca
+jjzlrku (635) -> fuwbaq, lcwpm, oahpf, anhldnx
+zkmdfh (5)
+dvskig (22)
+zaitni (83) -> iqagnh, ixckwlm, kfvvzd
+ikthp (51)
+jvpob (76)
+cpxwa (67)
+sphwh (88)
+mlbjc (81) -> fylao, ggilocf
+rwmci (63) -> qnofu, rimlwoh
+fluuo (51)
+exvmk (78)
+jgdqi (3125) -> mxsvay, hrjil, fhtktd, qqvgeq
+aplal (124) -> ezotk, mithbv
+gouyeqw (27)
+iqagnh (47)
+xfjafp (78)
+gvaie (153) -> cpwdhw, bjqzgqj
+ijbth (5)
+zduooao (93)
+tjlrb (78)
+emeyn (35)
+zblcbd (34)
+xxtki (88)
+nxgjqaf (1807) -> ubaaa, hjxhx, uyofsmv
+xqnan (87) -> ckbuzb, rutqvq
+xyquxix (70)
+pwuhv (72)
+sygcnhv (92)
+qjlfwtm (19)
+vkkgwbr (8)
+casbq (22)
+zeisn (95)
+rplqlc (63)
+ewsqqum (99) -> mojwgp, zuxgf
+mojwgp (64)
+dexul (230)
+kdmprsg (56)
+amifh (43)
+notot (63)
+byphua (60)
+vfjayw (88)
+gfrwxw (85)
+vrpoaq (41) -> mwzpa, pfhjtw, rthxl, ppythr
+wngqx (26)
+obgmlzf (67)
+daojy (17)
+vxnwq (61) -> kjhrii, ulovosc, ytjaofr, vrgblbn, rwmci, mlbjc, vblppqb
+yzcddkw (40) -> hvnzfbd, hqnonqc
+iiswvjq (62)
+yeerc (68)
+ycncnr (42)
+cmrcpf (294) -> onbptkd, qxsxzth
+zbtlfr (35)
+paqggr (84) -> ettsdu, iekjt
+prfbji (14)
+bodpwem (244) -> jkoyzxm, gtxlyzz, qweyxa, bbqzlo
+ccpek (60)
+buzjgp (65)
+ahwtsi (54)
+ckbuzb (60)
+mrflo (82)
+alcfp (63)
+engay (35)
+fxeka (18)
+ohqlwmr (112) -> tdcxeia, maaid, fiygpep, zhgql
+iizggi (25)
+qcqpavg (364)
+siwvncp (54)
+lpjxpx (63)
+ryecm (25)
+xrsaryj (115) -> qcrxve, iuuve
+dterxr (244) -> hfxmz, mpble
+kcjujcr (207) -> eyavk, ikthp
+sjommm (98)
+lneqx (456)
+dccvh (201) -> uipvt, iqeap, gbuilbn, oafxzu
+duzorty (20)
+mdfae (11)
+pmavka (48)
+ekrym (8)
+logpgb (2713) -> wamxgvn, ozqsvif, olnpj
+pxrxqs (78)
+thunt (94) -> tlsdvhf, yoofo
+ogkucp (84)
+xroaal (43)
+czacja (23)
+xbaytg (5)
+embmhv (25)
+ahsef (41)
+cfbjnxb (799) -> ujpka, fjonxe, slacopj
+itusrhj (277) -> gscng, pekzuyh
+vhruv (34)
+fdvtn (44)
+flrtvno (21)
+fiygpep (35)
+fhtktd (1103) -> xxtki, pgnulg
+dirvqby (72)
+codroxx (49)
+fswirnb (98)
+rvzqqr (290) -> wafsr, pwhrvu
+peocao (235)
+drleu (70)
+ygszhn (86) -> lnuqdd, tjlsmrz, yomawy
+ixbxszv (43)
+nzfjwtq (67) -> douggpq, ezptzx
+wfmxgw (98)
+gzuqs (80)
+ujpka (84) -> bhpvfr, dnslk
+ebjpdvd (19)
+mykkoc (91)
+pyydxvi (95)
+prybce (62)
+smpmp (9)
+nfvns (183)
+rvqubk (81)
+ezvdo (74)
+gdkll (12)
+tzoefdo (95)
+vzdmsv (224)
+vcusbhv (196) -> ospfv, wfvtfos, yjdsnqu
+beocjuy (45)
+zjxlr (6)
+dlxubg (344)
+kfvvzd (47)
+zrypv (85)
+aonpk (25)
+icsrp (14)
+pjthjam (286) -> ofqav, sgvbpct
+fgyjop (51)
+rstsr (68) -> xnleu, gfvjqj
+xgrjpl (92)
+rlzobr (89) -> ctifv, ffevqd, kbbyj, otgnir
+vbvctl (87)
+lqspkzw (90) -> rvzqqr, avsse, rocllr, cpiscj
+mbqtji (392) -> paqjozd, wsbpne, tncexxs
+vuumtry (63)
+zpjxsi (28)
+cykvv (247) -> yeerc, qfyrdo
+chgpk (281) -> sxygbpo, hkyqakf
+wchlqxi (72)
+lzwplw (64)
+daonbjx (790) -> ohcfrxm, yinhnv, bvugv, pgeoixp, qpfybmv
+ffevqd (87)
+gnhcs (78)
+yjdsnqu (5)
+vjugmg (73) -> qekol, jjdcuql, atdrk, rqzkom
+swcxes (60) -> bzwhd, ekuohb
+hmfvzi (21)
+wwcrqwq (54)
+iezlg (71) -> maugts, nxgjqaf, liibv, qrvmp, nwyqp, mjfbr
+erphv (31)
+vpxbz (48) -> qaalu, gtutr
+sbsustu (91)
+uvwnhot (14)
+mbdwm (65)
+cwspi (15)
+fnvxe (104) -> bwmckc, vxftbc
+qmxjyg (56)
+hkyqakf (27)
+uyofsmv (1214) -> ukdbm, iojjekn, dterxr, dvetl
+glbipl (21)
+yjjrrjj (93)
+xnleu (84)
+dyeffd (64)
+mpbui (52) -> bcima, yowna, hvpzbd, smzzu
+hvnzfbd (92)
+vguwn (40)
+tdcxeia (35)
+dhccilz (471) -> wxzenj, tyjzoq, azrdj, mxtqhi, pjthjam, zzjicx
+mfvqvf (355) -> rcdic, ebwifj
+qsjue (81)
+kgnbx (56)
+efsdxm (74)
+niojmd (95)
+uzxjxjx (68) -> plsic, mmngri, mevvf
+drbjnk (99)
+hqnonqc (92)
+opczxnj (59)
+iwumx (41)
+jwpbg (13)
+aetlth (7) -> tnejqkf, mywhdsm
+ujjksl (169) -> ixhsq, fluuo
+ygqjcm (74) -> uqpxyi, uxmfcyr, oudxhh, iktols
+oyjjdj (678) -> svbmkbx, lxpkrf, vayyag
+pnumlg (27)
+hbyxgv (94)
+ivhzxr (14)
+geajywv (63)
+kjhrii (135) -> ddblq, ehkhs
+rehezo (56) -> vuumtry, rplqlc, zcakvl
+gunfz (80)
+airnuh (369) -> hygdtn, nzrbmfg
+ruejmc (283) -> icsrp, ivhzxr, uvwnhot, jakny
+ikpyx (82)
+zxlfwi (25)
+ocxbgp (285)
+qfsbvqe (39)
+htmjx (48) -> tptdvct, smhzr, dyeffd
+ukdbm (44) -> rskopr, rujggz, mhihjb, jimigk
+lqtuij (66)
+jogicnh (63)
+vqlqq (6)
+bkcgx (80)
+fxsmo (85)
+icoiqa (256) -> ljscsoa, sxqnium
+ehhrom (334) -> aqshqpo, kgnbx
+tgrfyrx (6071) -> urepv, ippmv, yvirt, mofdlro, teeunu, jgdqi
+kttzsv (49)
+hpmag (88)
+jjixrr (44)
+rjkzf (147) -> fxeka, pealz
+rtsji (96)
+wfuxy (61)
+dzjef (22)
+gfvjqj (84)
+lslsl (28)
+lizqvr (101) -> zaeyze, ppbgib, obgmlzf
+rcdic (14)
+ykiwb (105) -> drbjnk, vwokfc
+dygrnnf (153) -> pxrxqs, xfjafp
+csbdh (28)
+tffhcft (64)
+eilgcny (62) -> ldfybwl, gzuqs, gunfz
+hfxmz (36)
+spqwtg (1089) -> foaubeo, ehhrom, fcuhw
+gtitbbk (40)
+wsbpne (15)
+gpcxuo (81)
+cpsmrch (333)
+fhmkuo (266) -> zeisn, niojmd
+ckifyf (23)
+ppbgib (67)
+titychs (25909) -> fqmyi, logpgb, cyasn, fheklq
+hlyfdr (26)
+zmveluw (42)
+kqhggwy (167)
+cakob (96)
+wipzuag (187) -> rerviwo, sjommm
+hvpzbd (78)
+vexun (72)
+fuwbaq (13) -> ytzrx, pwyiwkf, rlzobr, mbqtji, jpnfrsb
+fqmyi (3349) -> wxirji, cfbjnxb, shethb
+xbgmzxd (144) -> wsozlg, lzqtms
+paqjozd (15)
+jakny (14)
+susknu (81)
+olnpj (87) -> rhsdbfh, vqmeer, oqzcbx, eedxiav
+hjrzrli (62)
+tjzut (9)
+kizufjn (13)
+iduxx (9)
+wfvtfos (5)
+dhahfgv (31)
+oahpf (630) -> pmyqol, zaitni, xxpfmp, aplal, vzdmsv, paqzzv, fnvxe
+utvyxj (72)
+andixsk (39)
+nglumw (49)
+cdeji (59)
+ynxfzsu (73) -> amifh, xroaal
+hpljf (37)
+oanoax (52) -> csbdh, tfdjhaa
+jbxcafx (97) -> qlpft, evxjdeo
+xaplszi (689) -> qgbtnil, icoiqa, vzfebn
+sbtyi (91)
+wnhmooe (37)
+qekol (35) -> gljri, cakob, pvdbhh
+lkffdz (81)
+hjxhx (42) -> germn, ycrxr, cmrcpf, tbrxke, gbecv, wnakg, epdqjdp
+ualcokx (35) -> nkdtsf, vmvdhds
+hwofq (37) -> izjbi, dqqyiwm
+bzmra (34)
+gnuywz (30)
+rutqvq (60)
+kvgrf (38)
+rpbawy (67)
+uunjwu (70)
+nlrwlj (49)
+ettsdu (91)
+pyjzb (8)
+ehhlk (75)
+vdekve (292) -> xbaytg, rvftpif
+ycrxr (312) -> twvlr, djplc
+pdewbw (74)
+xzzar (239) -> tqzbg, zyrztc
+hwcbsyu (167) -> wjjmh, uwwyv
+msowvgh (6)
+jptxyhp (89)
+ulkzj (39)
+ytzrx (275) -> uspfk, wpner, wwcrqwq
+lunivx (78)
+tfdjhaa (28)
+lzqtms (7)
+qsgpsfr (96) -> utneufs, exvmk
+qmvebxb (43) -> hjuzxv, nxrlaw, pdewbw, hqlni
+qkilfj (99) -> mohya, fxsmo
+twvlr (18)
+fejmhpg (190) -> kvgrf, civkkh
+lzcant (149) -> gnoywf, ebjpdvd
+fcuhw (390) -> qpcmzl, ujdil
+qlxioka (25)
+tyealpm (72)
+ndbzyu (68)
+djqtfp (68)
+wlbua (48)
+xuhchjm (80)
+mwzpa (73)
+dqyifwc (61)
+tovvj (8)
+rthxl (73)
+bhpvfr (50)
+geiethw (35)
+yinhnv (22) -> mucnt, edmsh, apgzt
+abofflv (105) -> vjmwzo, jvpob, ddpmrsd
+ayxuibs (89) -> kgxseg, tjlrb
+ebcygk (42) -> cehqdz, qmxjyg, pwpmx
+ebhag (96)
+pqwzgz (189) -> jgjbcux, powwpec
+pmznzoa (68)
+fylao (55)
+bbqzlo (32)
+chxurcq (54)
+egdccd (54)
+yghyn (72)
+zuxgf (64)
+apgzt (77)
+ujdil (28)
+lwmblwr (208) -> ingwpue, jfwho
+oyvaqjr (80)
+maaid (35)
+pcnbkxm (93) -> bfxdtkg, zduooao, mundgs
+gscng (29)
+tolty (336) -> vwzein, tqyheu
+nzzwed (67)
+ruhyv (29)
+wxpmbu (84)
+izjbi (61)
+jbprgm (87)
+jpnfrsb (290) -> codroxx, xrvno, pnpge
+hcvvfm (12)
+yowna (78)
+mithbv (50)
+qcxfwey (81)
+pgnulg (88)
+bxucoyp (70)
+sxqnium (51)
+bzwhd (24)
+tbrxke (250) -> kxtzbj, zfuqmcg
+hnocmo (30)
+hbollnl (225) -> qrbvsw, mcnek
+pfhjtw (73)
+mrydp (324) -> vswcvmu, cwflw
+envbl (113) -> ehhlk, cvvex
+swojvy (44)
+gzlfqg (5)
+vblppqb (164) -> qhwkoc, oqiynm, kspoky
+rocllr (88) -> tvixzc, seleq, bmsje, vbvctl
+vlmzfaf (91)
+jfwho (78)
+llpxo (6)
+pwhrvu (73)
+kxxhn (126) -> ahsef, rrlwo
+evojkum (21)
+cpiscj (436)
+qhwkoc (9)
+grxqt (233) -> mtzvap, wngqx
+rhsdbfh (185) -> rlzbv, xgrjpl
+mbqdugj (62)
+aelsfhi (58) -> rzehh, fswirnb
+douggpq (86)
+ysrwm (206) -> zkzpbbp, xsnmq, ofndvr
+fjtgkp (78)
+tsfrlzw (82)
+kghzy (1262) -> gvaie, ykiwb, wztfz, vojblx, cocplr
+gzpcl (1291) -> qgzaj, wrxzti, hjrzrli, qklbf
+ykryfdg (1297) -> aoqukac, gtkqi, cjhcn
+kqitg (203) -> gnuywz, wwolc
+bwmckc (60)
+yovtgg (67)
+irducr (56)
+encean (92)
+tseydw (27)
+tyhtbv (28)
+macxvi (179) -> oyvaqjr, arqvl
+qklbf (62)
+hpocx (59)
+qccwy (85) -> yjjrrjj, dgvvi
+mehtsc (84)
+djupte (20) -> wnoer, qcxfwey, rvqubk, gpcxuo
+meuyumr (810) -> vpxbz, mhpbfn, qhutc
+crdlymr (1705) -> ixbxszv, vcjpuw, vmoqov
+suhcj (14)
+lujurf (62)
+pjqaa (118) -> bzmra, ateol, zblcbd, qwtlvuj
+ddpmrsd (76)
+foaubeo (70) -> hbyxgv, totzxaf, dkpmgrq, wtxndn
+ykubvpo (133) -> hpljf, wnhmooe
+ljscsoa (51)
+wztfz (269) -> whotly, evpryza
+qaalu (74)
+zzjicx (146) -> hvizfxx, xlukbym
+ykvqh (305) -> uavzab, xghng
+tbmflh (28)
+bpazmfd (41)
+bwxgrhf (14)
+vswcvmu (27)
+nnhlcn (201) -> emeyn, vzyxst
+vzyxst (35)
+qrvmp (426) -> xaplszi, jhdmh, hzcmmh, kkhvw, csoko
+kmrbuvq (31)
+uqpxyi (81)
+tstuc (59) -> sphwh, hpmag
+kbothlh (149) -> uhwtkvo, ovalfky, lqtuij, sogepf
+xvhnaf (15)
+qzsjiw (40)
+krnjk (82)
+rifmmf (98)
+cnqemd (48)
+ombqq (72)
+xmvxrop (48) -> eaumqtc, dqpcn, ygqjcm
+pwpmx (56)
+jhggy (5)
+ruvrw (54)
+qcrxve (90)
+ldfybwl (80)
+eyavk (51)
+smhzr (64)
+mtvxp (63)
+gmcebvw (26)
+hpbbqmn (84)
+wafsr (73)
+homrc (78)
+znnjzzw (8) -> sbsustu, sbtyi, clzgzgc, mykkoc
+umitnao (80)
+tncexxs (15)
+qwbkv (92)
+tipdlf (61) -> dnirbtx, kttzsv, mysslj
+wnakg (166) -> hpcafa, emecx
+fxzvbzr (51) -> qqbdtow, xuhchjm
+tgjdv (80) -> ogkucp, bpusqb
+hiaoc (31)
+onbptkd (27)
+yhovo (78)
+zogeax (85)
+qqbdtow (80)
+leoti (41)
+yomawy (154)
+qfyrdo (68)
+rerviwo (98)
+liibv (8767) -> toccxvy, xbgmzxd, vgowu
+uxmfcyr (81)
+cfdumg (27)
+emecx (91)
+hbbhm (137) -> hacgqe, egdccd
+zvrld (46) -> xsilcvz, evxjdo
+ixckwlm (47)
+ruitlxx (67) -> jbiaxln, ekfwsv
+wwolc (30)
+ixhsq (51)
+rutmxs (14)
+sekcqad (72)
+haeee (400) -> qozshd, prfbji, jenxqco, wcklpgi
+uqwbtx (41)
+phoic (5)
+kqbrwt (43) -> ruhyv, xxpauyc
+btzbl (78)
+ziock (49)
+yycys (11)
+tvixzc (87)
+frucbsg (69)
+ruuovw (41) -> hflkio, lneqx, fhmkuo, haeee, jvefqe, hgsdq
+wamxgvn (511) -> ywxionz, olxmnkc, kqitg, envbl
+qrbvsw (54)
+evpryza (17)
+zjxyreo (34) -> gvuwq, awpvs
+sfyqi (17)
+gtutr (74)
+ctifv (87)
+yjjewyt (43)
+mofdlro (789) -> aplauwh, tcrcyis, bfkpjdl, akkrsv, lxshx, xmvxrop
+hjqvntn (59)
+wxirji (553) -> pmvdtmm, fejmhpg, paqggr
+qgzaj (62)
+qqszul (18)
+kgxseg (78)
+iktols (81)
+orzwmml (478) -> engay, zbtlfr
+gkbpz (78)
+inattlb (72)
+jjdcuql (183) -> xyquxix, uunjwu
+kkhvw (1133) -> zjxyreo, fgptt, ebcygk
+rrsfv (11)
+atdrk (285) -> kzflj, qjlfwtm
+nrarwj (75)
+tdymtd (7)
+bvxiqzm (42)
+ehkhs (28)
+cvpoqqk (211) -> delev, vebyb
+owizuw (62) -> ixcxv, qiikh, wgdrxl, xzqgkqn, vcusbhv, fxzvbzr, jbxcafx
+kgamsy (28)
+cmhoj (12) -> frucbsg, yccfitx
+kbgmlab (43)
+epdqjdp (244) -> epbevf, hlyfdr, szoomk, gmcebvw
+vrgblbn (191)
+ndtcui (239) -> umymwd, ptydckb
+xjoid (154) -> xuqhpz, nglumw
+mefyd (54)
+cpwdhw (75)
+jwasx (246) -> tyhtbv, lslsl
+pwyiwkf (281) -> wkdxdem, yhovo
+xcndr (8)
+yvirt (960) -> nopjkom, spqwtg, fyqlqkg
+xttop (30)
+nwyqp (1965) -> yxmycw, sqehayt, eisyowo, ykryfdg
+clzgzgc (91)
+agsrs (185) -> qsnjuqh, wcztr, xrsaryj, ifqsqyz
+ojrsv (35)
+gnoywf (19)
+wyzmc (97) -> dlrfwee, vrmevdy
+tesql (72)
+ejsitta (83) -> mehtsc, hpbbqmn, eipyu
+ekfwsv (58)
+xxitunl (69)
+jvefqe (339) -> ulkzj, jflns, grkauy
+vwokfc (99)
+mtzvap (26)
+vzbywuf (78)
+cquptt (59)
+fmstmh (383)
+qgbtnil (86) -> daaldt, ndbzyu, yrotnfh, djqtfp
+qshxib (44)
+nclav (91) -> vhruv, vjnejlj
+azrdj (176) -> zbwrrsc, mcgaqx
+cehqdz (56)
+zfuqmcg (49)
+tkhjz (73)
+pealz (18)
+hbomk (50)
+oyuklmp (12)
+klgsp (89) -> uhfiqwc, susknu, nocugh, qsjue
+uwwyv (36)
+mhpbfn (196)
+krcntq (165) -> duzorty, mcvuku, sneog, bnetz
+dkvqe (222) -> qzsjiw, vguwn
+ingwpue (78)
+smzzu (78)
+bzplleg (21)
+uhptzfg (28)
+qwtlvuj (34)
+arqvl (80)
+bnetz (20)
+yfolyk (48)
+flqjd (84) -> yxbwlf, fgumszu, wfmxgw
+igwew (5332) -> kjdjj, agsrs, vjugmg
+vjnejlj (34)
+svtcvi (14)
+lnuqdd (154)
+evxjdo (92)
+vvtfwwb (74)
+snhww (39) -> yghyn, tesql
+cjhcn (124) -> aonpk, caqjohx
+iovcix (92)
+mgexekz (212) -> namzem, rjksjq
+ajyyjfx (75)
+bwpqytq (59)
+nvmqchp (23)
+asosowy (56)
+guttanj (208) -> tovvj, vkkgwbr, xcndr, ksioqg
+utneufs (78)
+zcakvl (63)
+begmhqg (87) -> lyeoeff, efsdxm, vvtfwwb, ezvdo
+pmvdtmm (220) -> ckifyf, nvmqchp
+fmmhxab (13) -> zxsgnx, iqzkp, ynxfzsu, hwofq, nclav
+zaeyze (67)
+djsbpg (7)
+rqwgj (15) -> nhrla, titychs, tgrfyrx, aoxky, iezlg, yraktfn
+lxpkrf (196) -> vkrlz, dvskig
+nlixy (67)
+gbuilbn (27)
+vayyag (56) -> qwbkv, xzvbcms
+qsnjuqh (61) -> btzbl, lunivx, fjtgkp
+aoqukac (50) -> iiswvjq, prybce
+ekcuavb (19)
+tbxxc (372)
+ippmv (21) -> btxts, daonbjx, zebuqzh, gyqrut
+zvpaj (69) -> zcgaxsi, ziock
+bltkr (42)
+dnflzcz (16) -> dkvqe, eilgcny, rtatr, jwasx
+jbiaxln (58)
+qmelelp (80) -> epovby, suhcj
+mpble (36)
+ebtoke (143) -> pmavka, wlbua
+pqfnj (98)
+kxchm (37)
+cznyy (224)
+ytcgcq (80)
+phqplx (85) -> asosowy, irducr, ktbtfdb, vfgomle
+umymwd (47)
+zceovs (25) -> koxyrpn, emhnlu
+rtkydv (83) -> zjrpxp, lydynp, tkhjz
+ayixid (79)
+xlukbym (83)
+stketdd (157) -> gzdtco, vfjayw
+yompk (162) -> unuwu, yasoqri, mzvjxgp
+slacopj (44) -> bxucoyp, drleu
+emhnlu (94)
+mbzme (101) -> hpouwfs, hnmba, dzjef
+mohya (85)
+totzxaf (94)
+ifqsqyz (223) -> vpfoaw, yrmmga
+lngffo (61)
+xxpauyc (29)
+qxsxzth (27)
+zebuqzh (45) -> ejsitta, chgpk, zyajdwf, itusrhj, nnunune, qvdrme
+ubiuve (6)
+mcvuku (20)
+uipvt (27)
+qqvgeq (359) -> zvrld, nsuysii, uwauv, dexul
+gejaump (212) -> iduxx, tiirxay, smpmp
+sidmmmy (44)
+qjnela (266) -> andixsk, qfsbvqe
+idfyy (51) -> vxnwq, meuyumr, oyjjdj, iqwspxd, aobgmc";
 
-//var fullInput =
-//@"88223 818
-//66JQ9 398
-//6T9AT 311
-//53TT3 43
-//J6266 762
-//5TTAA 647
-//44JTT 779
-//T4T66 496
-//6AAA3 383
-//69K4Q 232
-//55KA5 436
-//666JJ 479
-//75J85 835
-//27379 323
-//592Q3 565
-//33777 438
-//75224 136
-//2QQK2 116
-//JJQK9 219
-//9Q77J 46
-//68686 177
-//7A7AA 336
-//J4K3A 582
-//46QA9 11
-//5AJ85 712
-//AJAJ4 264
-//AK2AA 756
-//K49KK 597
-//9J882 678
-//28QQ8 405
-//93333 401
-//KJTQJ 281
-//K78Q4 941
-//T8J56 377
-//Q6TQT 440
-//T44T4 792
-//6KK66 7
-//2JT22 144
-//K6656 665
-//6JQ4K 87
-//5J4JA 419
-//3A2J4 325
-//47T47 291
-//3J7Q3 190
-//4A527 234
-//223K2 917
-//233J3 912
-//844QQ 268
-//TKTJK 125
-//22298 62
-//T6J59 258
-//99K69 896
-//8J878 834
-//J5655 757
-//4J26T 255
-//4K3K5 448
-//229J9 889
-//22372 702
-//6Q73T 832
-//Q9892 919
-//QJQ7Q 898
-//JTTT5 173
-//959J9 543
-//AAAA5 858
-//3Q5Q6 159
-//23372 39
-//453AK 572
-//A6A82 410
-//Q88Q8 241
-//J675A 348
-//KQQ2Q 643
-//KJK52 981
-//A9989 631
-//33633 64
-//44TJA 274
-//A49A4 59
-//AKAKA 864
-//4333K 184
-//8T843 238
-//54594 429
-//J222J 78
-//5Q655 374
-//5Q8KA 147
-//J8Q2J 278
-//29293 387
-//T8TT4 15
-//T7K36 481
-//43776 782
-//24292 369
-//7K3Q2 551
-//42T2T 495
-//5Q5QQ 761
-//QKKKK 312
-//22J9A 948
-//T552T 657
-//75Q77 45
-//35296 931
-//46266 157
-//9J4KK 973
-//A4A77 269
-//36T6T 235
-//44483 386
-//29452 924
-//66Q66 723
-//4TT86 717
-//544AK 956
-//QQQ9Q 75
-//JJ989 708
-//AKKA9 842
-//2777K 519
-//Q569A 831
-//65838 996
-//9AAA9 128
-//Q722Q 95
-//KJ2KK 807
-//8TTKK 989
-//393J9 306
-//44J44 263
-//85335 70
-//54499 500
-//KKJ44 462
-//Q44K4 636
-//Q3392 870
-//8J896 540
-//8QQ63 485
-//37955 209
-//6K5K8 35
-//58JKT 307
-//66QQ7 993
-//Q4K98 937
-//K2J42 583
-//45333 965
-//TAJ75 74
-//T548J 114
-//J5599 111
-//9J557 79
-//49JK3 669
-//T9T9T 613
-//J5TK6 69
-//TQTJT 223
-//98746 560
-//3QQ33 271
-//7A3QK 692
-//AQ347 32
-//653J9 638
-//J8J48 635
-//94449 873
-//44449 957
-//T4TTT 224
-//949T4 695
-//Q8Q4Q 376
-//75QJ5 130
-//K8K68 988
-//84J45 441
-//82577 443
-//T4383 812
-//973T2 1000
-//TKK4J 781
-//K6J77 911
-//8Q383 491
-//333AJ 230
-//53555 492
-//68666 183
-//666Q5 178
-//26KKK 379
-//77TTQ 978
-//92992 907
-//T2562 65
-//K7J3K 324
-//67365 400
-//2222J 331
-//AA2AA 933
-//8AAAJ 790
-//47474 105
-//48T43 203
-//A5AJT 736
-//9J6TQ 162
-//TTTT6 700
-//97987 851
-//K5788 439
-//Q9399 591
-//34976 406
-//3434T 486
-//6A66J 22
-//9J9TA 822
-//QQ66J 632
-//77755 590
-//5564A 345
-//J5A75 186
-//29785 828
-//88844 882
-//38KK6 955
-//66TTT 349
-//78TKK 969
-//46344 881
-//7TT77 561
-//6JTTQ 997
-//QA8QA 921
-//8Q2T4 625
-//67T4A 403
-//436K5 214
-//6K7T8 26
-//8A98K 197
-//T3K84 141
-//5J454 344
-//74Q69 642
-//KJ555 20
-//5A4A8 129
-//Q4A5J 510
-//K2KK5 126
-//T6686 853
-//7Q774 867
-//99696 459
-//7Q3TA 770
-//9J966 117
-//T4T5T 494
-//828K2 236
-//54726 38
-//88T82 704
-//73977 502
-//535A5 294
-//K9K5K 418
-//8TT9J 115
-//Q2376 480
-//5A9T7 257
-//KK9KK 673
-//33KK3 427
-//4A575 974
-//JT94J 515
-//999A9 83
-//Q342A 938
-//8JKAJ 574
-//5664J 775
-//642A4 101
-//33K28 916
-//K28JK 176
-//QQQQK 967
-//4A4Q4 616
-//T578T 552
-//46474 174
-//QQ83J 837
-//22287 23
-//JJJJJ 725
-//KK55K 120
-//AAQA5 555
-//72737 37
-//Q82JQ 518
-//77667 464
-//QJAQA 367
-//K323K 52
-//777T4 751
-//74777 452
-//839QJ 124
-//8Q989 326
-//5K5JA 711
-//777J7 396
-//46AJT 767
-//88669 637
-//JTTKQ 34
-//JKK9K 251
-//66226 163
-//J3343 605
-//998J5 534
-//AT72K 950
-//7J757 608
-//84TT4 460
-//99955 315
-//TK5KA 60
-//T82JQ 991
-//46866 661
-//T8TTT 19
-//25K65 577
-//QK3J6 284
-//7A977 390
-//KKKK2 774
-//J97A7 143
-//QK545 655
-//AK4T3 454
-//374K9 300
-//AJATT 614
-//96KA7 819
-//5525A 253
-//A995A 61
-//66Q6Q 36
-//4J253 282
-//3JK9Q 385
-//44JJ4 196
-//KKKKJ 166
-//K8KK8 299
-//J9979 179
-//93999 738
-//47T3K 726
-//A6J45 182
-//JT322 421
-//35J36 545
-//838TK 434
-//6AK6A 838
-//4JT44 929
-//J5955 473
-//K4A47 611
-//QK472 40
-//AJTTJ 106
-//4J9TT 82
-//4QQ4Q 316
-//38KA8 836
-//96K8A 586
-//J286T 318
-//2JJ77 778
-//4344K 528
-//866AA 215
-//68676 56
-//934J3 563
-//44J45 355
-//4J443 804
-//5QQ58 185
-//844AK 53
-//3T333 909
-//TJ2K5 860
-//AAQ3A 395
-//66646 272
-//54T8K 676
-//A4Q25 67
-//94J49 696
-//42KK2 267
-//KQK8T 985
-//4QJ29 559
-//83686 244
-//53292 940
-//QK6KK 503
-//78777 660
-//J4424 194
-//8Q46Q 699
-//72776 368
-//KA553 926
-//44454 627
-//52599 86
-//242A2 337
-//49955 467
-//QJAQK 847
-//J22AJ 259
-//2QQ2Q 228
-//K33KK 833
-//95559 900
-//262AJ 250
-//9AQ34 604
-//8Q99Q 788
-//JAQT9 908
-//Q9432 47
-//T3346 619
-//8K97T 30
-//J62J6 240
-//28888 302
-//K96K9 320
-//9TQAT 960
-//J9877 612
-//88878 556
-//6QQ5T 732
-//6JA89 681
-//3JJ5T 435
-//QQ2K7 77
-//ATTTT 283
-//QKJQ8 629
-//53353 276
-//A2A33 805
-//383AJ 797
-//J684K 169
-//44J4A 164
-//KKK5K 392
-//7988J 24
-//Q5446 885
-//7777A 713
-//24386 839
-//J77A7 537
-//KTA7Q 16
-//6TTJJ 677
-//9Q93Q 523
-//22322 280
-//2QK58 984
-//65795 6
-//T9TTT 763
-//66A67 58
-//KJ994 743
-//Q7KQQ 222
-//4A424 270
-//KQKQK 694
-//843Q4 287
-//5QQAQ 330
-//Q4449 593
-//QQQ4J 131
-//2222K 132
-//28287 402
-//J46A4 707
-//24242 982
-//6686J 733
-//8T9Q8 175
-//45J3Q 442
-//6Q48J 444
-//3TTQ3 737
-//4TT4T 127
-//5555A 399
-//AKT29 872
-//TTT7J 340
-//J44QQ 89
-//57A3Q 453
-//QJAJQ 682
-//7JQ74 450
-//J55Q2 342
-//59267 773
-//8J884 652
-//33383 456
-//K68JJ 600
-//6JJA4 156
-//T8T8J 771
-//62222 942
-//92999 947
-//55886 946
-//75A77 601
-//3QK54 945
-//A2686 531
-//39Q38 687
-//TKKTT 360
-//8886K 339
-//7774A 202
-//T2222 798
-//3786T 171
-//547A6 623
-//22T2T 170
-//T2688 201
-//KJ7A4 902
-//9322T 922
-//74Q6A 666
-//J72T7 511
-//44A44 72
-//Q776Q 411
-//4K4K8 588
-//K43JJ 760
-//AAAA6 714
-//52J55 8
-//3K94A 976
-//AKJTQ 729
-//65J66 94
-//9KKK3 445
-//6ATJT 876
-//T2529 432
-//68A79 397
-//82J4Q 566
-//53557 472
-//83383 356
-//AAAQA 380
-//KTKK5 357
-//5T24J 746
-//6777J 289
-//TK9K9 843
-//44744 213
-//3KTKT 728
-//J739A 659
-//T33JJ 928
-//84QJQ 952
-//KKK67 378
-//97979 954
-//K52T4 332
-//75QA6 863
-//ATTK2 603
-//33Q33 207
-//4AJ24 9
-//5TTK5 949
-//TTJ9T 663
-//77277 645
-//434QQ 364
-//JJJ8J 527
-//T479Q 706
-//7A77K 413
-//TK486 640
-//KKJ59 17
-//799Q9 97
-//33646 447
-//2323J 477
-//K2758 986
-//T5TT5 547
-//9956Q 609
-//TK753 149
-//87Q79 193
-//JQQQQ 512
-//44988 871
-//AA4AA 789
-//J2564 347
-//23J68 890
-//KAAAT 684
-//K9KTK 334
-//TTTT3 857
-//99899 783
-//426J3 865
-//8J288 689
-//7QT8J 122
-//73679 649
-//653AQ 899
-//9992T 544
-//66TJ6 416
-//382A9 252
-//52J54 273
-//J665T 630
-//82222 221
-//TT3T3 262
-//44748 927
-//T75KQ 85
-//44554 587
-//4866J 754
-//47T6T 92
-//899TT 4
-//999JJ 576
-//87898 868
-//45T32 217
-//J54T4 977
-//JAAJA 721
-//43KJ3 883
-//4888K 110
-//5A544 546
-//J6783 220
-//85956 63
-//54334 137
-//J9384 688
-//94429 249
-//QQJA3 803
-//AA66A 180
-//99K9T 28
-//535J5 607
-//8AA88 341
-//862K2 382
-//8J888 314
-//25282 796
-//8J8J8 488
-//88Q35 188
-//J99Q9 840
-//5K832 475
-//3333A 653
-//A4A4J 539
-//999T9 370
-//77J73 310
-//JJKKJ 964
-//J9856 584
-//54J9K 727
-//22777 231
-//6Q274 469
-//TTTTJ 408
-//6J2Q2 33
-//AJ867 484
-//55J55 892
-//K7593 971
-//5AT5T 474
-//A2KKA 113
-//24222 906
-//93J33 875
-//Q43AJ 972
-//88JT7 569
-//5Q8K8 888
-//J7T53 747
-//99986 29
-//5JAA5 968
-//97A75 468
-//A5A58 449
-//77455 44
-//88T8A 820
-//42732 455
-//6A66A 575
-//888KK 358
-//TT966 780
-//2KKTT 150
-//Q5J5Q 718
-//53J37 827
-//A8J42 461
-//K2863 548
-//9TT99 216
-//33343 802
-//TTAAT 995
-//K4T9J 786
-//TKA39 785
-//QQQQ3 766
-//97Q7Q 903
-//QJQ57 821
-//92699 598
-//49273 529
-//2245J 731
-//J7826 701
-//2K724 983
-//88KJK 769
-//55592 815
-//QK72J 920
-//3QQ29 446
-//ATTJT 650
-//K93AA 303
-//T63TT 507
-//93993 810
-//858J8 852
-//2T5K9 165
-//3TJ33 1
-//93JTK 683
-//999K9 672
-//J6663 628
-//443T4 42
-//QQKT7 407
-//AA3AA 242
-//K9223 624
-//QAQTA 570
-//39TJ3 490
-//22332 54
-//82274 848
-//2549T 210
-//K7J55 466
-//JK3AT 285
-//Q42AQ 50
-//2KQTK 730
-//T5A8T 71
-//523JT 470
-//8T4AQ 433
-//TT3A6 664
-//555Q5 793
-//62227 932
-//TT8J2 777
-//5Q5TT 91
-//83A33 388
-//666J6 963
-//2J68Q 415
-//5TQ37 12
-//J8428 246
-//JT7T9 953
-//8K269 133
-//755Q7 530
-//8777A 962
-//K55K5 394
-//84828 195
-//37246 679
-//6796K 724
-//QAA2A 844
-//AT47Q 951
-//57T5K 121
-//35T85 227
-//94TJ6 809
-//4J6J6 685
-//J5545 138
-//K653T 646
-//T267Q 414
-//JJ559 535
-//3K59K 25
-//5AA23 412
-//AJAAK 465
-//Q7Q77 595
-//9A99J 722
-//7QQQQ 3
-//KTKKQ 536
-//TTJJT 393
-//T2K26 905
-//4AQ4Q 894
-//88885 740
-//QAQ8Q 96
-//AQQQA 516
-//78877 748
-//447AA 200
-//42JQQ 617
-//33J33 776
-//88787 155
-//2K688 734
-//J5K53 886
-//Q88QQ 850
-//266Q6 167
-//8QQ84 644
-//TTTJK 610
-//K4936 958
-//24K3A 698
-//55T55 697
-//Q5353 146
-//339QQ 752
-//9Q584 84
-//2J822 497
-//Q7T25 365
-//57JTQ 140
-//A847T 458
-//82Q7T 80
-//97779 293
-//66K88 675
-//66446 633
-//T6KTT 934
-//966J6 849
-//22T53 854
-//88AKK 514
-//K5J58 305
-//88222 298
-//88K6J 526
-//528Q8 936
-//A2A3A 208
-//K49A9 191
-//4JJ47 319
-//5J858 108
-//JA345 425
-//8T2Q6 715
-//AA999 990
-//Q96J9 879
-//84J44 742
-//A3A3J 806
-//AATA8 557
-//AJ77A 504
-//36753 27
-//65686 66
-//J76A9 279
-//3T63T 913
-//9ATJJ 568
-//K64K4 580
-//8888K 668
-//6K9J6 134
-//23533 431
-//65656 705
-//T3T43 979
-//79899 48
-//QQQKK 795
-//7TA7T 709
-//KQ627 409
-//66669 265
-//K8732 404
-//K6663 992
-//QJQJQ 765
-//88383 855
-//JT4TJ 944
-//26QQ6 874
-//KK6KK 501
-//6K7K2 451
-//3TAK7 772
-//TTJ55 328
-//6QJ66 424
-//56577 428
-//6T6T6 816
-//J9J2T 375
-//J66TT 923
-//TK2JQ 602
-//QT7T8 233
-//QQ9Q9 381
-//447KK 959
-//AJ6AA 107
-//679T5 895
-//2J559 533
-//9JKAQ 489
-//84Q92 521
-//KQT83 884
-//66946 648
-//329KT 198
-//5588T 925
-//TTTT5 99
-//637JT 218
-//9K4AJ 918
-//7JT5T 914
-//24966 513
-//76J3Q 13
-//74994 260
-//QQQQ5 585
-//777TJ 112
-//24JJ2 286
-//Q4Q77 88
-//9A559 626
-//A63JK 987
-//7T776 719
-//24A34 618
-//J2722 878
-//T2TTT 327
-//664QK 904
-//A5663 160
-//J9Q65 187
-//J333K 457
-//35355 476
-//55757 558
-//T3A48 856
-//QQ445 261
-//2JKK2 296
-//Q74Q3 758
-//5KJ5K 353
-//22J24 651
-//99366 256
-//Q7Q59 172
-//AA9JJ 2
-//9999J 288
-//77779 313
-//394TA 247
-//J55Q5 532
-//TTTTK 384
-//68868 749
-//56TJT 389
-//J555J 5
-//T577J 304
-//A7T96 290
-//7T99A 391
-//K7KK7 621
-//KQT72 483
-//JAAA2 846
-//9QK26 710
-//23233 750
-//T33T2 352
-//42444 351
-//4224J 841
-//574J5 31
-//A744J 525
-//484KJ 371
-//44242 68
-//97J26 482
-//KK882 153
-//32689 139
-//429AK 755
-//Q5382 102
-//84Q88 487
-//5J645 622
-//99J34 361
-//759QA 581
-//88585 10
-//4JT94 338
-//75A44 14
-//5557J 363
-//KK244 522
-//66636 277
-//799T9 509
-//37J93 142
-//J6522 359
-//573KJ 98
-//63TA3 90
-//QQQ8Q 825
-//549QQ 538
-//99T39 498
-//AA37A 830
-//JJ9JQ 211
-//Q2T88 799
-//JA58K 346
-//6TQ3T 297
-//85385 720
-//A5AA6 123
-//75588 794
-//Q7979 768
-//57KQQ 366
-//882J2 554
-//T9K65 735
-//8T787 550
-//T5JJT 615
-//22832 564
-//96JT9 859
-//QT22J 716
-//8T6T6 335
-//J2474 541
-//AT8AQ 578
-//Q7QQ4 573
-//56J7K 869
-//46477 109
-//68858 579
-//74J78 961
-//A8A8Q 641
-//4AA44 662
-//TTT56 791
-//94292 229
-//AAJ87 703
-//4A6K6 901
-//487T2 656
-//JK626 800
-//99996 998
-//84448 520
-//3QKT5 845
-//QA4TA 517
-//QQTTK 226
-//K995K 596
-//77393 76
-//99JAA 437
-//79K59 205
-//9K22K 824
-//8389A 741
-//755TT 18
-//77757 970
-//A2777 634
-//J795Q 148
-//24425 690
-//7Q7Q3 81
-//5TT89 471
-//4Q223 243
-//AAAK6 248
-//Q6443 620
-//58668 478
-//5K26T 493
-//66J46 999
-//46348 745
-//62KTK 930
-//JK377 893
-//Q6K98 119
-//5T83K 542
-//77332 658
-//44K44 422
-//K6K6J 606
-//75357 199
-//99946 980
-//89989 372
-//22J25 103
-//47J47 814
-//K7K77 667
-//93883 670
-//2QTT2 135
-//Q693K 753
-//A5JT9 237
-//38KKJ 571
-//66AAT 254
-//36636 354
-//9AT3J 417
-//88899 212
-//QQ3Q3 599
-//J265J 100
-//55KAK 866
-//57Q2A 654
-//6T266 292
-//954J2 245
-//5TT65 671
-//3T693 21
-//ATAT7 994
-//K8777 51
-//5JQ92 808
-//95A75 343
-//42K6Q 813
-//4J4TK 880
-//77768 266
-//9J929 549
-//653J5 592
-//AAQKQ 275
-//59956 877
-//5A2J6 317
-//J9QT3 784
-//QAQQQ 887
-//KKK4K 301
-//J777J 499
-//QQQ6Q 910
-//88898 154
-//4Q553 151
-//88J98 189
-//95J66 161
-//87785 589
-//628J4 935
-//58Q67 362
-//55522 430
-//44555 817
-//QT792 939
-//85754 158
-//TKKKK 861
-//AAKK3 966
-//56JT5 686
-//77776 181
-//K5553 49
-//85855 508
-//64444 862
-//5TAQ8 739
-//97KK7 118
-//7J566 321
-//99944 505
-//TQTTQ 463
-//K4528 680
-//298K2 329
-//66656 691
-//55222 152
-//9QTTT 891
-//64KJ9 801
-//Q7737 639
-//73533 57
-//55524 204
-//95999 322
-//TA7QT 423
-//AAAKA 829
-//66QJ7 55
-//77353 897
-//47A38 333
-//88A77 192
-//88T8Q 567
-//74A68 308
-//55556 811
-//9AJ6K 975
-//QQQ4Q 239
-//37Q33 506
-//737AJ 915
-//222J9 420
-//7755K 562
-//4T7J4 93
-//KJA84 168
-//66463 693
-//KATTT 674
-//KT555 295
-//8J459 206
-//28882 426
-//Q27K9 73
-//53442 943
-//96678 553
-//K34T2 309
-//A555A 104
-//A7AK2 764
-//J8Q7Q 225
-//TATT3 373
-//63T48 594
-//93933 759
-//6Q78K 145
-//KA29A 823
-//AAJAA 744
-//85A26 524
-//7777K 350
-//T6363 826
-//J333J 41
-//55AA6 787";
+var smallInput =
+@"pbga (66)
+xhth (57)
+ebii (61)
+havc (66)
+ktlj (57)
+fwft (72) -> ktlj, cntj, xhth
+qoyq (66)
+padx (45) -> pbga, havc, qoyq
+tknk (41) -> ugml, padx, fwft
+jptl (61)
+ugml (68) -> gyxo, ebii, jptl
+gyxo (61)
+cntj (57)";
 
-//var smallInput =
-//@"32T3K 765
-//T55J5 684
-//KK677 28
-//KTJJT 220
-//QQQJA 483";
+var smallest = "";
 
-//var smallest = "AATTJ 11";
+var input = smallInput;
+input = fullInput;
+//input = smallest;
+var timer = System.Diagnostics.Stopwatch.StartNew();
 
-//var input = smallInput;
-//input = fullInput;
-////input = smallest;
-//var timer = System.Diagnostics.Stopwatch.StartNew();
+var result = "";
 
-//var result = 0;
+var nodes = new Dictionary<string, Node>();
+Node GetOrCreate(string name)
+{
+    if (!nodes.ContainsKey(name))
+    {
+        nodes[name] = new Node { Name = name };
+    }
+    return nodes[name];
+}
 
-//var dct = new SortedDictionary<long, int>();
-//foreach (var line in input.Split(Environment.NewLine))
-//{
-//    var split = line.Split(" ");
-//    dct.Add(GetSortKey(split[0].ToCharArray()), int.Parse(split[1]));
-//}
+foreach (var line in input.Split(Environment.NewLine))
+{
+    var split = line.Split(" -> ");
+    var aa = split[0].Replace("(", "").Replace(")", "").Split(" ");
+    var name = aa[0];
+    var weight = int.Parse(aa[1]);
 
-//result = dct.Select((x, i) => x.Value * (i + 1)).Sum();
+    var node = GetOrCreate(name);
+    node.Weight = weight;
 
-//timer.Stop();
-//Console.WriteLine(result); // pt 2: 251226257 too high | 251135960 16ms
-//Console.WriteLine(timer.ElapsedMilliseconds + "ms");
-//Console.ReadLine();
+    if (split.Length > 1)
+    {
+        var others = split[1].Split(", ");
+        foreach (var other in others)
+        {
+            var otherNode = GetOrCreate(other);
+            node.LinkedUp.Add(otherNode);
+            otherNode.LinkedDown.Add(node);
+        }
+    }
+}
 
-//long GetSortKey(char[] cards)
-//{
-//    return Smort((short)GetHandType(cards), GetCardStrength(cards[0]), GetCardStrength(cards[1]), GetCardStrength(cards[2]), GetCardStrength(cards[3]), GetCardStrength(cards[4]));
-//}
+result = nodes.Single(x => !x.Value.LinkedDown.Any()).Key;
 
-//long Smort(params short[] values)
-//{
-//    var sum = 0L;
-//    for (int i = values.Length - 1; i >= 0; i--)
-//    {
-//        var size = values.Length - i;
-//        sum += values[i] * (int)Math.Pow(20, size);
-//    }
-//    return sum * -1;
-//}
+timer.Stop();
+Console.WriteLine(result);
+Console.WriteLine(timer.ElapsedMilliseconds + "ms");
+Console.ReadLine();
 
-//short GetCardStrength(char card)
-//{
-//    if (card == 'T') { return 5; }
-//    if (card == 'J') { return 14; }
-//    if (card == 'Q') { return 3; }
-//    if (card == 'K') { return 2; }
-//    if (card == 'A') { return 1; }
-//    return (short)(15 - (card - 48));
-//}
-
-//HandType GetHandType(IEnumerable<char> cards)
-//{
-//    var jCount = cards.Count(x => x == 'J');
-//    if (jCount == 5 || jCount == 4) { return HandType.Five; }
-//    if (jCount == 0) { return GetHandTypeInteral(cards); }
-//    var withoutJoker = GetHandTypeInteral(cards.Where(x => x != 'J'));
-//    if (jCount == 3) // 2 real cards
-//    {
-//        if (withoutJoker == HandType.Pair) { return HandType.Five; }
-//        return HandType.Four;
-//    }
-//    if (jCount == 2) // 3 real cards
-//    {
-//        if (withoutJoker == HandType.Three) { return HandType.Five; }
-//        if (withoutJoker == HandType.Pair) { return HandType.Four; }
-//        return HandType.Three;
-//    }
-//    if (withoutJoker == HandType.Four) { return HandType.Five; }
-//    if (withoutJoker == HandType.Three) { return HandType.Four; }
-//    if (withoutJoker == HandType.TwoPair) { return HandType.Full; }
-//    if (withoutJoker == HandType.Pair) { return HandType.Three; }
-//    return HandType.Pair;
-//}
-
-//HandType GetHandTypeInteral(IEnumerable<char> cards)
-//{
-//    var groups = cards.GroupBy(x => x).Select(x => x.Count()).ToList();
-//    if (groups.Any(x => x == 5))
-//    {
-//        return HandType.Five;
-//    }
-//    if (groups.Any(x => x == 4))
-//    {
-//        return HandType.Four;
-//    }
-//    if (groups.Any(x => x == 3) && groups.Any(x => x == 2))
-//    {
-//        return HandType.Full;
-//    }
-//    if (groups.Any(x => x == 3))
-//    {
-//        return HandType.Three;
-//    }
-//    if (groups.Count(x => x == 2) == 2)
-//    {
-//        return HandType.TwoPair;
-//    }
-//    if (groups.Any(x => x == 2))
-//    {
-//        return HandType.Pair;
-//    }
-//    return HandType.HighCard;
-//}
-
-//enum HandType
-//{
-//    Five,
-//    Four,
-//    Full,
-//    Three,
-//    TwoPair,
-//    Pair,
-//    HighCard
-//}
+class Node
+{
+    public string Name { get; set; }
+    public List<Node> LinkedUp { get; set; } = new List<Node>();
+    public List<Node> LinkedDown { get; set; } = new List<Node>();
+    public int Weight { get; set; }
+}
