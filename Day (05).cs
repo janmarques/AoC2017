@@ -1119,8 +1119,17 @@ for (int i = 0; ;)
 {
     if (i >= lines.Length) { break; }
     var line = lines[i];
-    lines[i]++;
+    if (line >= 3)
+    {
+        lines[i]--;
+    }
+    else
+    {
+        lines[i]++;
+    }
+
     i += line;
+
     result++;
 }
 
