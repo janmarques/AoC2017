@@ -15,8 +15,8 @@ public static class Utils
     public record Direction(char icon, int x, int y);
     public static Direction[] Directions = new[] {
         new Direction('E', 1, 0),
-        new Direction('W', -1, 0),
         new Direction('N', 0, -1),
+        new Direction('W', -1, 0),
         new Direction('S', 0, 1),
     };
     public static char InverseDirection(char x)
