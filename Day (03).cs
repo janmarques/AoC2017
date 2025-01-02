@@ -1,11 +1,12 @@
 ﻿using AoC2024;
+using System.Net.Http.Headers;
 using static AoC2024.Utils;
 
 var fullInput =
 368078;
 
 var smallInput =
-13;
+400;
 
 var smallest = 1024;
 
@@ -32,10 +33,29 @@ var directions = new Dictionary<char, (int, int)>() {
 var x = 0;
 var y = 0;
 
+var elements = new Dictionary<(int x, int y), int>()
+{
+    {(x: 0,y: 0),1 }
+};
+
 for (int i = 1; i < input; i++)
 {
     x += directions.ElementAt(facing % 4).Value.Item1;
     y += directions.ElementAt(facing % 4).Value.Item2;
+
+    var value = Utils.DirectionsWithDiagonals.Sum(n => elements.SingleOrDefault(e => e.Key.x == x + n.x && e.Key.y == y + n.y).Value);
+    elements[(x, y)] = value;
+    //elements[(x, y)] = i;
+
+    if (value > input)
+    {
+        result = value;
+        break;
+    }
+    //if (i == 1)
+    //{
+    //    elements[(x, y)] = 1;
+    //}
 
     stepCounter++;
 
@@ -53,12 +73,14 @@ for (int i = 1; i < input; i++)
         facing++;
         first = !first;
     }
+
+    //PrintGrid(elements, x => x.Key.x, x => x.Key.y, x => x.Value.ToString(), nullPrint: (_, _) => " ");
 }
 
-result = Math.Abs(x) + Math.Abs(y);
+//result = Math.Abs(x) + Math.Abs(y);
 
 timer.Stop();
-Console.WriteLine(result); // 370 too low
+Console.WriteLine(result); // 376087 too high
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
 
