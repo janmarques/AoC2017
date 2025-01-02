@@ -1013,7 +1013,7 @@ input = fullInput;
 //input = smallest;
 var timer = System.Diagnostics.Stopwatch.StartNew();
 
-var result = 0;
+var result = int.MinValue;
 
 
 var registers = new Dictionary<string, int>();
@@ -1047,6 +1047,7 @@ foreach (var line in input.Split(Environment.NewLine))
     void SetValue()
     {
         registers[a] += aOpVal * (aOp == "dec" ? -1 : 1);
+        result = Math.Max(result, registers[a]);
     }
 
     if (Check())
@@ -1055,7 +1056,6 @@ foreach (var line in input.Split(Environment.NewLine))
     }
 }
 
-result = registers.Values.Max();
 
 timer.Stop();
 Console.WriteLine(result);
