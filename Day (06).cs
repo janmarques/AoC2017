@@ -18,17 +18,23 @@ var blocks = input.Split('\t', ' ').Select(int.Parse).ToArray();
 
 string Hash(int[] ints) => string.Join("\t", ints);
 
-var visited = new HashSet<string>()
+var visited = new Dictionary<string, (int, int)>()
 {
-    Hash(blocks)
+    { Hash(blocks), (1,0) }
 };
 
 while (true)
 {
     result++;
     blocks = Balance(blocks);
-    if (!visited.Add(Hash(blocks)))
+    var hash = Hash(blocks);
+    if (!visited.ContainsKey(hash))
     {
+        visited[hash] = (1, result);
+    }
+    else
+    {
+        result = result - visited[hash].Item2;
         break;
     }
 }
