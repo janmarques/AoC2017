@@ -1134,10 +1134,21 @@ foreach (var line in input.Split(Environment.NewLine))
     }
 }
 
-result = nodes.Single(x => !x.Value.LinkedDown.Any()).Key;
+nodes.Single(x => !x.Value.LinkedDown.Any()).Value.Print();
+//var toVisit = new List<Node>() { nodes.Single(x => !x.Value.LinkedDown.Any()).Value };
+//while (toVisit.Any())
+//{
+//    var newToVisit = new List<Node>() { };
+//    foreach (var item in toVisit)
+//    {
+//        Console.WriteLine($"{item.Name} - {item.GetUpWeights()}");
+//        newToVisit.AddRange(item.LinkedUp);
+//    }
+//    toVisit = newToVisit;
+//}
 
 timer.Stop();
-Console.WriteLine(result);
+Console.WriteLine(result);  // 34386 too high
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
 
@@ -1147,4 +1158,26 @@ class Node
     public List<Node> LinkedUp { get; set; } = new List<Node>();
     public List<Node> LinkedDown { get; set; } = new List<Node>();
     public int Weight { get; set; }
+
+    public int GetUpWeights() => Weight + LinkedUp.Sum(x => x.GetUpWeights());
+
+    public void Print(int depth = 0)
+    {
+        if (Name == "rqwgj")
+        {
+
+        }
+        var ups = LinkedUp.Select(x => x.GetUpWeights());
+        var balanced = !LinkedUp.Any() || LinkedUp.Select(x => x.GetUpWeights()).Distinct().Count() == 1;
+
+        if (!balanced)
+        {
+            Console.WriteLine($"{new string('*', depth)}{Name} - {Weight} - {GetUpWeights()} {(balanced ? "" : "!")} ({string.Join(",", LinkedUp.Select(x => $"{x.Name}:{x.GetUpWeights()}"))})");
+        }
+
+        foreach (var item in LinkedUp)
+        {
+            item.Print(depth + 1);
+        }
+    }
 }
