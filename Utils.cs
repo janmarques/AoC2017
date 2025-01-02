@@ -223,11 +223,11 @@ public static class Utils
 
     public static void AllCombinations<T>(IEnumerable<T> grid, Action<T, T> action)
     {
-        foreach (var item in grid)
+        for (int i = 0; i < grid.Count(); i++)
         {
-            foreach (var other in grid.Except([item]).Skip(1))
+            for (int j = i + 1; j < grid.Count(); j++)
             {
-                action(item, other);
+                action(grid.ElementAt(i), grid.ElementAt(j));
             }
         }
     }

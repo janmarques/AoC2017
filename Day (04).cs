@@ -1,4 +1,6 @@
-﻿var fullInput =
+﻿using AoC2024;
+
+var fullInput =
 @"vxjtwn vjnxtw sxibvv mmws wjvtxn icawnd rprh
 fhaa qwy vqbq gsswej lxr yzl wakcige mwjrl
 bhnlow huqa gtbjc gvj wrkyr jgvmhj bgs umo ikbpdto
@@ -513,9 +515,7 @@ azz ajdcqkd bcafn zaz dcjaqdk gylyzo
 xzvfbf fopmfxu mvftgr mfupoxf coyhof talcc vpkslo";
 
 var smallInput =
-@"aa bb cc dd ee
-aa bb cc dd aa
-aa bb cc dd aaa";
+@"aa bb cc dd aa";
 
 var smallest = "";
 
@@ -536,7 +536,16 @@ foreach (var line in input.Split(Environment.NewLine))
 
 bool EvaluateLine(string line)
 {
-    return line.Split(" ").GroupBy(x => x).OrderByDescending(x => x.Count()).First().Count() == 1;
+    var words = line.Split(" ");
+    var result = true;
+    Utils.AllCombinations(words, (a, b) =>
+    {
+        if (a.OrderByDescending(x => x).SequenceEqual(b.OrderByDescending(x => x)))
+        {
+            result = false;
+        }
+    });
+    return result;
 }
 
 timer.Stop();
