@@ -11,7 +11,7 @@ input = fullInput;
 //input = smallest;
 var timer = System.Diagnostics.Stopwatch.StartNew();
 
-var result = 0.0;
+var result = double.MinValue;
 
 var x = 0.0;
 var y = 0.0;
@@ -28,9 +28,10 @@ foreach (var dir in input.Split(","))
         case "sw": y -= 0.5; x -= 0.5; break;
         default: throw new Exception();
     }
+    var tmp = Math.Abs(x) + Math.Abs(y);
+    result = Math.Max(result, tmp);
 }
 
-result = Math.Abs(x) + Math.Abs(y);
 
 timer.Stop();
 Console.WriteLine(result);
