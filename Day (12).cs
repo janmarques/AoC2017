@@ -1,4 +1,6 @@
-﻿var fullInput =
+﻿using System.Security.Cryptography;
+
+var fullInput =
 @"0 <-> 199, 1774
 1 <-> 350, 1328, 1920
 2 <-> 477, 984, 1419
@@ -2046,9 +2048,13 @@ void Discover(Node n)
         Discover(item);
     }
 }
-Discover(nodes[0]);
 
-result = inGroup.Count;
+foreach (var item in nodes.Values)
+{
+    if (inGroup.Contains(item)) { continue; }
+    result++;
+    Discover(item);
+}
 
 timer.Stop();
 Console.WriteLine(result);
