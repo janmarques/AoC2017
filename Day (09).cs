@@ -4,7 +4,9 @@
 """";
 
 var smallInput =
-@"{{{},{},{{}}}}";
+""""
+<!!!>>
+"""";
 
 var smallest = "";
 
@@ -19,25 +21,29 @@ var braces = new Stack<bool>();
 var inGarbage = false;
 var ignoreNext = false;
 
+
+
+int i = 0;
+int garbageStart = 0;
+int garbageExclams = 0;
 foreach (var item in input)
 {
     if (ignoreNext)
     {
+        garbageExclams++;
         ignoreNext = false;
-        continue;
     }
-    if (item == '!')
+    else if (item == '!')
     {
+        garbageExclams++;
         ignoreNext = true;
-        continue;
     }
-
-    if (inGarbage)
+    else if (inGarbage)
     {
         if (item == '>')
         {
+            result += (i - garbageStart - garbageExclams);
             inGarbage = false;
-            continue;
         }
     }
     else
@@ -45,20 +51,19 @@ foreach (var item in input)
         if (item == '<')
         {
             inGarbage = true;
-            continue;
+            garbageStart = i + 1;
+            garbageExclams = 0;
         }
         if (item == '{')
         {
             braces.Push(true);
-            result += braces.Count();
-            continue;
         }
         if (item == '}')
         {
             braces.Pop();
-            continue;
         }
     }
+    i++;
 }
 
 timer.Stop();
