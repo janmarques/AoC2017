@@ -60,14 +60,23 @@ var result = 0;
 
 var layers = input.Split(Environment.NewLine).Select(x => x.Split(": ").Select(int.Parse)).Select(x => (depth: x.First(), range: x.Last())).ToList();
 
-for (int i = 0; i <= layers.Max(x => x.depth); i++)
+for (; ; result++)
 {
-    var (depth, range) = layers.SingleOrDefault(x => x.depth == i);
-    if (range == 0) { continue; }
-    if (i % (2 * range - 2) == 0)
+    if (TryDelay(result)) { break; }
+}
+
+bool TryDelay(int x)
+{
+    for (int i = 0; i <= layers.Max(x => x.depth); i++)
     {
-        result += range * depth;
+        var (depth, range) = layers.SingleOrDefault(x => x.depth == i);
+        if (range == 0) { continue; }
+        if ((i + x) % (2 * range - 2) == 0)
+        {
+            return false;
+        }
     }
+    return true;
 }
 
 timer.Stop();
