@@ -16,26 +16,23 @@ var result = 0;
 var steps = input;
 
 var pos = 0;
-var lst = new List<int>(50000000) { 0 };
+var length = 1;
 var hashset = new HashSet<int>();
 for (int i = 0; i < 50000000; i++)
 {
     //Utils.Counter("i", expectedTotal: 50000000, timer: true);
-    pos = (pos + steps) % lst.Count;
-    lst.Insert(pos + 1, i + 1);
+    pos = (pos + steps) % length;
+    length++;
     pos++;
-    if (hashset.Add(lst[1]))
+    //Console.WriteLine($"{i} {lst[1]}");
+    if(pos == 1)
     {
-        Console.WriteLine($"{i} {lst[1]}");
-    }
-    if (lst[1] != 665)
-    {
+        Console.WriteLine($"{i} {i+1}");
 
     }
 }
 
-
-result = lst[lst.IndexOf(0) + 1];
+// result is last print
 
 timer.Stop();
 Console.WriteLine(result);
