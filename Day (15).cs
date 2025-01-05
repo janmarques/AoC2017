@@ -26,15 +26,43 @@ var timer = System.Diagnostics.Stopwatch.StartNew();
 
 var result = 0;
 
-for (var i = 0; i < 40_000_000; i++)
+IEnumerable<long> GetAs()
 {
-    a = (a * aFactor) % max;
-    b = (b * bFactor) % max;
+    while (true)
+    {
 
-    var aBytes = BitConverter.GetBytes(a).Take(2);
-    var bBytes = BitConverter.GetBytes(b).Take(2);
+        a = (a * aFactor) % max;
+        if (a % 4 == 0)
+        {
+            yield return a;
+        }
+    }
+}
 
-    if(aBytes.SequenceEqual(bBytes))
+IEnumerable<long> GetBs()
+{
+    while (true)
+    {
+        b = (b * bFactor) % max;
+        if (b % 8 == 0)
+        {
+            yield return b;
+        }
+    }
+}
+
+var aS = GetAs().Take(5_000_000).ToArray();
+var bS = GetBs().Take(5_000_000).ToArray();
+
+for (var i = 0; i < 5_000_000; i++)
+{
+    var la = aS.ElementAt(i);
+    var lb = bS.ElementAt(i);
+
+    var aBytes = BitConverter.GetBytes(la).Take(2);
+    var bBytes = BitConverter.GetBytes(lb).Take(2);
+
+    if (aBytes.SequenceEqual(bBytes))
     {
         result++;
     }
