@@ -1,4 +1,7 @@
-﻿using System.Runtime.ExceptionServices;
+﻿using AoC2024;
+using System.Collections.Concurrent;
+using System.Runtime.ExceptionServices;
+using System.Security.AccessControl;
 
 var fullInput =
 @"set i 31
@@ -44,16 +47,13 @@ jgz f -16
 jgz a -19";
 
 var smallInput =
-@"set a 1
-add a 2
-mul a a
-mod a 5
-snd a
-set a 0
+@"snd 1
+snd 2
+snd p
 rcv a
-jgz a -1
-set a 1
-jgz a -2";
+rcv b
+rcv c
+rcv d";
 
 var smallest = "";
 
@@ -61,69 +61,102 @@ var input = smallInput;
 input = fullInput;
 //input = smallest;
 var timer = System.Diagnostics.Stopwatch.StartNew();
-
 var result = 0L;
 
-var registers = new Dictionary<char, long>();
+var a = new Machine(input, 0);
+var b = new Machine(input, 1);
+a.Out = b.In;
+b.Out = a.In;
 
-var lines = input.Split(Environment.NewLine).ToArray();
-for (long i = 0; i < lines.Length; i++)
-{
-    var line = lines[i];
-    var split = line.Split(" ").ToArray();
-    var register = split[1].Single();
-    var pValue = long.MinValue;
-    if (split.Length > 2)
-    {
-        if (char.IsLetter(split[2], 0))
-        {
-            registers.TryGetValue(split[2].Single(), out pValue);
-        }
-        else
-        {
-            pValue = long.Parse(split[2]);
-        }
-
-    }
-    if (!registers.ContainsKey(register))
-    {
-        registers[register] = 0;
-    }
-
-    switch (split[0])
-    {
-        case "snd":
-            result = registers[register];
-            break;
-        case "set":
-            registers[register] = pValue;
-            break;
-        case "add":
-            registers[register] += pValue;
-            break;
-        case "mul":
-            registers[register] *= pValue;
-            break;
-        case "mod":
-            registers[register] %= pValue;
-            break;
-        case "rcv":
-            Console.WriteLine(result);
-            goto end;
-            break;
-        case "jgz":
-            if (registers[register] > 0)
-            {
-                i += pValue - 1;
-            }
-            break;
-
-        default: throw new Exception();
-    }
-}
-end:;
+Task.Run(() => a.Execute());
+Task.Run(() => b.Execute());
 
 timer.Stop();
-Console.WriteLine(result); // 862 too low
+Console.WriteLine(result);
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
+
+
+class Machine(string input, int processId)
+{
+    public int SendCnt { get; set; }
+    public BlockingCollection<long> Out { get; set; }
+    public BlockingCollection<long> In { get; set; } = new BlockingCollection<long> { };
+
+    public void Execute()
+    {
+        var registers = new Dictionary<char, long>()
+        {
+            { 'p', processId }
+        };
+
+        var lines = input.Split(Environment.NewLine).ToArray();
+        for (long i = 0; i < lines.Length; i++)
+        {
+            Utils.Counter(processId.ToString(), 1_000_000);
+            var line = lines[i];
+            var split = line.Split(" ").ToArray();
+            var register = split[1].Single();
+            var isRegister = char.IsLetter(register);
+            var bValue = long.MinValue;
+            if (split.Length > 2)
+            {
+                if (char.IsLetter(split[2], 0))
+                {
+                    registers.TryGetValue(split[2].Single(), out bValue);
+                }
+                else
+                {
+                    bValue = long.Parse(split[2]);
+                }
+
+            }
+            if (isRegister && !registers.ContainsKey(register))
+            {
+                registers[register] = 0;
+            }
+            var aValue = isRegister ? registers[register] : long.Parse(register.ToString());
+
+
+            switch (split[0])
+            {
+                case "snd":
+                    Out.Add(aValue);
+                    SendCnt++;
+                    //Console.WriteLine($"Program {processId} sending {register} {SendCnt}");
+                    break;
+                case "set":
+                    registers[register] = bValue;
+                    break;
+                case "add":
+                    registers[register] += bValue;
+                    break;
+                case "mul":
+                    registers[register] *= bValue;
+                    break;
+                case "mod":
+                    registers[register] %= bValue;
+                    break;
+                case "rcv":
+                    if (In.TryTake(out var inVal, TimeSpan.FromSeconds(2)))
+                    {
+                        registers[register] = inVal;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Program {processId} {SendCnt}");
+                        return;
+                    }
+                    break;
+                case "jgz":
+                    if (aValue > 0)
+                    {
+                        i += bValue - 1;
+                    }
+                    break;
+
+                default: throw new Exception();
+            }
+        }
+    }
+}

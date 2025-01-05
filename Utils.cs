@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -136,8 +137,8 @@ public static class Utils
 
     static public int Manhatten((int x, int y) from, (int x, int y) to) => Math.Abs(from.x - to.x) + Math.Abs(from.y - to.y);
 
-    static Dictionary<string, int> Counters = new Dictionary<string, int>();
-    static Dictionary<string, Stopwatch> Timers = new Dictionary<string, Stopwatch>();
+    static ConcurrentDictionary<string, int> Counters = new ConcurrentDictionary<string, int>();
+    static ConcurrentDictionary<string, Stopwatch> Timers = new ConcurrentDictionary<string, Stopwatch>();
     static public int Counter(string name, int threshold = 10000, long expectedTotal = 0, bool timer = false, Func<string> extraText = null)
     {
         if (timer && !Timers.ContainsKey(name))
