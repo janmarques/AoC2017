@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using AoC2024;
+using System.Text;
 
 var fullInput =
 @"stpzcrnm";
@@ -16,8 +17,46 @@ var timer = System.Diagnostics.Stopwatch.StartNew();
 var result = 0;
 
 var grid = Enumerable.Range(0, 128).Select(x => Hash($"{input}-{x}")).ToArray();
-result = grid.SelectMany(x => x).Count(x => x);
-//var xx = Hash("flqrgnkx-0");
+
+int NumHash(int x, int y) => x + 128 * 128 * y;
+var groups = new List<HashSet<(int, int)>>();
+
+for (int i = 0; i < 128; i++)
+{
+    for (int j = 0; j < 128; j++)
+    {
+        if (!grid[i][j]) { continue; }
+        var newGrp = new HashSet<(int, int)> { (i, j) };
+        foreach (var dir in Utils.Directions)
+        {
+            var newX = i + dir.x;
+            var newY = j + dir.y;
+            if (newX < 0 || newY < 0 || newX > 127 || newY > 127) { continue; }
+            if (!grid[newX][newY]) { continue; };
+            newGrp.Add((newX, newY));
+        }
+
+        var existingXX = groups.Where(x => x.Any(y => newGrp.Contains(y))).ToList();
+        if (!existingXX.Any())
+        {
+            groups.Add(newGrp);
+        }
+        else
+        {
+            var consolidated = existingXX.First();
+
+            consolidated.UnionWith(newGrp);
+            foreach (var item in existingXX.Skip(1).ToList())
+            {
+                consolidated.UnionWith(item);
+                groups.Remove(item);
+            }
+        }
+    }
+}
+
+result = groups.Count;
+
 bool[] Hash(string input)
 {
     var list = Enumerable.Range(0, 256).ToList();
