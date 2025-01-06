@@ -1017,82 +1017,29 @@ var timer = System.Diagnostics.Stopwatch.StartNew();
 
 var result = 0;
 
-var tmp = Solve(2, 4, -4).ToList();
-
 var particles = input.Split(Environment.NewLine)
     .Select((x, i) => (i, x.Split(new[] { "p=<", "v=<", "a=<", ">", ",", " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray()))
     .Select(x => new Particle { Id = x.i, X = x.Item2[0], Y = x.Item2[1], Z = x.Item2[2], vX = x.Item2[3], vY = x.Item2[4], vZ = x.Item2[5], aX = x.Item2[6], aY = x.Item2[7], aZ = x.Item2[8], })
     .ToList();
-Utils.AllCombinations(particles, (a, b) =>
+
+for (int i = 0; i < 50; i++)
 {
-    var xes = Solve((a.aX - b.aX), (a.vX - b.vX), (a.X - b.X)).ToArray();
-    var yes = Solve((a.aY - b.aY), (a.vY - b.vY), (a.Y - b.Y)).ToArray();
-    var zes = Solve((a.aZ - b.aZ), (a.vZ - b.vZ), (a.Z - b.Z)).ToArray();
-
-    foreach (var x in xes)
+    foreach (var item in particles)
     {
-        foreach (var y in yes)
-        {
-            if(Math.Abs(x - y) < 0.01)
-            {
-                foreach (var z in zes)
-                {
-                    if (Math.Abs(x - z) < 0.01)
-                    {
-                    }
-                }
-            }
-        }
-    }
+        item.vX += item.aX;
+        item.vY += item.aY;
+        item.vZ += item.aZ;
 
-    var matches = xes.Where(x => yes.Contains(x)/* && zes.Contains(x)*/).ToList();
-    if (matches.Count > 0)
-    {
+        item.X += item.vX;
+        item.Y += item.vY;
+        item.Z += item.vZ;
+
 
     }
-
-});
-
-// Xt = X + t*(vX + t*aX)
-// Xt = X + vXt + aXt^2
-
-//p =< 1609,-863,-779 >, v =< -15,54,-69 >, a =< -10,0,14 >
-//p =< -391,1353,-387 >, v =< -94,-42,0 >, a =< 14,-5,3 >
-
-
-// 1609 + -15*t + -10*t^2  === -391 + -94*t + 14*t^2 
-// 4*t^2 +79t + 2000 === 0
-// ...
-
-IEnumerable<double> Solve(int a, int b, int c)
-{
-    var d = Math.Sqrt(Math.Pow(b, 2) - (4 * a * c));
-    var s1 = (-b + d) / (2 * a);
-    var s2 = (-b - d) / (2 * a);
-    if (!double.IsNaN(s1)) { yield return s1; }
-    if (!double.IsNaN(s2)) { yield return s2; }
+        particles = particles.Except(particles.GroupBy(x => $"{x.X}|{x.Y}|{x.Z}|").Where(x => x.Count() > 1).SelectMany(x => x)).ToList();
 }
 
-//for (int i = 0; i < 2_000_000; i++)
-//{
-//    foreach (var item in particles)
-//    {
-//        item.X += item.vX;
-//        item.Y += item.vY;
-//        item.Z += item.vZ;
-
-//        item.vX += item.aX;
-//        item.vY += item.aY;
-//        item.vZ += item.aZ;
-//    }
-//    var collisions = particles.GroupBy(x => (x.X, x.Y, x.Z)).Where(x => x.Count() > 1).ToList();
-//    if (collisions.Any())
-//    {
-
-//    }
-//}
-
-result = particles.OrderBy(ManhattenA).First().Id;
+result = particles.Count;
 
 int Manhatten(Particle p) => Math.Abs(p.X) + Math.Abs(p.Y) + Math.Abs(p.Z);
 int ManhattenA(Particle p) => Math.Abs(p.aX) + Math.Abs(p.aY) + Math.Abs(p.aZ);
