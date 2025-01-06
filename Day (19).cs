@@ -218,7 +218,7 @@ input = fullInput;
 //input = smallest;
 var timer = System.Diagnostics.Stopwatch.StartNew();
 
-var result = "";
+var result = 0;
 
 var grid = Utils.ParseCoordGrid(input).ToList();
 var pos = grid.Single(x => x.y == 0 && x.c == '|');
@@ -229,7 +229,7 @@ while (true)
 {
     var d = Utils.Directions.Single(x => x.icon == dir);
 
-    visited.Add(pos);
+    result++;
     if (pos.c == '+')
     {
         try
@@ -248,13 +248,8 @@ while (true)
     else
     {
         var next = grid.SingleOrDefault(g => g.x == pos.x + d.x && g.y == pos.y + d.y && g.c != ' ');
-        if(pos.c == 'U')
-        {
-
-        }
         if (char.IsLetter(pos.c))
         {
-            result += pos.c;
         }
         if (next == default) { break; }
         pos = next;
