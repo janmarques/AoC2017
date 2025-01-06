@@ -1001,8 +1001,10 @@ p=<887,551,2127>, v=<123,81,299>, a=<-9,-5,-19>
 p=<283,101,2902>, v=<43,17,415>, a=<1,-1,-28>";
 
 var smallInput =
-@"p=<3,0,0>, v=<2,0,0>, a=<-1,0,0>
-p=<4,0,0>, v=<0,0,0>, a=<-2,0,0>";
+@"p=<-6,0,0>, v=<3,0,0>, a=<0,0,0>
+p=<-4,0,0>, v=<2,0,0>, a=<0,0,0>
+p=<-2,0,0>, v=<1,0,0>, a=<0,0,0>
+p=<3,0,0>, v=<-1,0,0>, a=<0,0,0>";
 
 var smallest = "";
 
@@ -1017,6 +1019,29 @@ var particles = input.Split(Environment.NewLine)
     .Select((x, i) => (i, x.Split(new[] { "p=<", "v=<", "a=<", ">", ",", " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray()))
     .Select(x => new Particle { Id = x.i, X = x.Item2[0], Y = x.Item2[1], Z = x.Item2[2], vX = x.Item2[3], vY = x.Item2[4], vZ = x.Item2[5], aX = x.Item2[6], aY = x.Item2[7], aZ = x.Item2[8], })
     .ToList();
+while (true)
+{
+
+}
+
+// Xt = X + t*(vX + t*aX)
+// Xt = X + vXt + aXt^2
+
+//p =< 1609,-863,-779 >, v =< -15,54,-69 >, a =< -10,0,14 >
+//p =< -391,1353,-387 >, v =< -94,-42,0 >, a =< 14,-5,3 >
+
+
+// 1609 + -15*t + -10*t^2  === -391 + -94*t + 14*t^2 
+// 4*t^2 +79t + 2000 === 0
+// ...
+
+(double, double) Solve(int a, int b, int c)
+{
+    var d = Math.Sqrt(Math.Pow(b, 2) - 4 * a * c);
+    var s1 = (-b + d) / (2 * a);
+    var s2 = (-b - d) / (2 * a);
+    return (s1, s2);
+}
 
 //for (int i = 0; i < 2_000_000; i++)
 //{
@@ -1029,6 +1054,11 @@ var particles = input.Split(Environment.NewLine)
 //        item.vX += item.aX;
 //        item.vY += item.aY;
 //        item.vZ += item.aZ;
+//    }
+//    var collisions = particles.GroupBy(x => (x.X, x.Y, x.Z)).Where(x => x.Count() > 1).ToList();
+//    if (collisions.Any())
+//    {
+
 //    }
 //}
 
