@@ -32,6 +32,7 @@ public static class Utils
         new Direction('c', -1, 1),
         new Direction('d', 1, -1),
     };
+
     public static char InverseDirection(char x)
         => x switch
         {
