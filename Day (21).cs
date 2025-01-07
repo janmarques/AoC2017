@@ -155,14 +155,14 @@ var transformations = input.Split(Environment.NewLine).Select(x =>
 void Print() => Utils.PrintGrid(grid, x => x ? "#" : ".");
 
 Print();
-for (int i = 0; i < (input.Length < 100 ? 2 : 5); i++)
+for (int i = 0; i < (input.Length < 100 ? 2 : 18); i++)
 {
     var maxX = grid.Length;
     var divide = maxX % 2 == 0 ? 2 : 3;
     var newGrids = new List<bool[][]>();
-    for (int xOff = 0; xOff < maxX; xOff += divide)
+    for (int yOff = 0; yOff < maxX; yOff += divide)
     {
-        for (int yOff = 0; yOff < maxX; yOff += divide)
+        for (int xOff = 0; xOff < maxX; xOff += divide)
         {
             var newGrid = new bool[divide][];
             for (int y = 0; y < divide; y++)
@@ -203,12 +203,14 @@ for (int i = 0; i < (input.Length < 100 ? 2 : 5); i++)
             kY += blockSize;
         }
     }
-    Print();
+    //Print();
+    result = grid.SelectMany(x => x).Count(x => x);
+    Console.WriteLine(fullSize);
+    Console.WriteLine(result);
 }
 
-result = grid.SelectMany(x => x).Count(x => x);
 
 timer.Stop();
-Console.WriteLine(result); // 122 too low
+Console.WriteLine(result); // 2554622 too low
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
