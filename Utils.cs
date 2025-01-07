@@ -58,12 +58,12 @@ public static class Utils
         Console.WriteLine();
     }
 
-    static public char[][] RotateClockwise(char[][] input)
+    static public T[][] RotateClockwise<T>(T[][] input)
     {
         var height = input.Length;
         var width = input[0].Length;
 
-        var target = Enumerable.Range(0, width).Select(x => new char[height]).ToArray();
+        var target = Enumerable.Range(0, width).Select(x => new T[height]).ToArray();
 
         for (var i = 0; i < height; i++)
         {
@@ -74,6 +74,8 @@ public static class Utils
         }
         return target;
     }
+
+    static public T[][] Flip<T>(T[][] input) => input.Select(x => x.Reverse().ToArray()).ToArray();
 
 
     static public void PrintGrid<T>(IEnumerable<T> grid, Func<T, int> X, Func<T, int> Y, Func<T, string> print = null, int? width = null, int? height = null, int? minWidth = null, int? minHeight = null, Func<int, int, string> nullPrint = null)
