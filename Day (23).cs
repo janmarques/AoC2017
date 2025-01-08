@@ -86,7 +86,7 @@ int Exec()
                     f = 0;
                 }
 
-                e -= -1;
+                e++;
                 g = e;
                 g -= b;
             } while (g != 0);
