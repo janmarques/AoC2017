@@ -48,51 +48,44 @@ input = fullInput;
 var timer = System.Diagnostics.Stopwatch.StartNew();
 var result = 0L;
 
-Console.WriteLine(Exec());
+result = Exec();
 
 int Exec()
 {
-    int a = 0, b = 0, c = 0, d = 0, e = 0, h = 0;
+    int b = 0, c = 0, h = 0;
 
-    a = 0;
     b = 79;
     c = b;
-    var incH = true;
 
-    if (a != 0)
+    b *= 100;
+    b += 100000;
+    c = b;
+    c += 17000;
+
+
+    for (; b - 17 < c; b = b + 17)
     {
-        b *= 100;
-        b += 100000;
-        c = b;
-        c += 17000;
-        incH = false;
-    }
-
-    while (b - c - 17 != 0)
-    {
-        for (d = 2; d < b; d++)
-        {
-            for (e = 2; e < b; e++)
-            {
-                if (d * e - b == 0)
-                {
-                    incH = true;
-                }
-                result++;
-            }
-        }
-
-        if (incH)
+        if (!IsPrime(b))
         {
             h++;
         }
-        b += 17;
     }
     return h;
 }
 
 
 timer.Stop();
-Console.WriteLine(result);
+Console.WriteLine(result); //1001 too high
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
+
+bool IsPrime(int n)
+{
+    if (n > 1)
+    {
+        return Enumerable.Range(1, n).Where(x => n % x == 0)
+                         .SequenceEqual(new[] { 1, n });
+    }
+
+    return false;
+}
