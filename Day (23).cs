@@ -68,14 +68,13 @@ int Exec()
         f = 1;
     }
 
-    for (g = -1; g != 0;)
+    for (g = -1; g != 0; g = b - c - 17)
     {
         d = 2;
-        for (g = -1; g != 0;)
+        for (g = -1; g != 0; g = d - b)
         {
             e = 2;
-
-            for (g = -1; g != 0;)
+            for (g = -1; g != 0; g = e - b)
             {
                 g = d * e - b;
 
@@ -85,24 +84,15 @@ int Exec()
                 }
 
                 e++;
-                g = e - b;
-
                 result++;
             }
-
             d++;
-            g = d;
-            g -= b;
         }
 
         if (f == 0)
         {
             h++;
         }
-
-        g = b;
-        g -= c;
-
         b += 17;
     }
     return h;
