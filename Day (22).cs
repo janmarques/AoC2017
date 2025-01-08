@@ -41,22 +41,49 @@ var timer = System.Diagnostics.Stopwatch.StartNew();
 
 var result = 0;
 
-var grid = Utils.ParseCoordGrid(input, x => new Cell { X = x.x, Y = x.y, Infected = x.c == '#' }).ToList();
+var grid = Utils.ParseCoordGrid(input, x => new Cell { X = x.x, Y = x.y, State = x.c == '#' ? State.Infected : State.Clean }).ToDictionary(x => (x.X, x.Y));
 
 var x = (int)Math.Sqrt(grid.Count) / 2;
 var y = x;
 var facing = 'N';
 
-
-void Print() => Utils.PrintGrid(grid, x => x.X, x => x.Y, x => x.Infected ? "#" : ".", nullPrint: (_, _) => ".");
-
-for (var i = 0; i < 10000; i++)
+string EnumPr(State state)
 {
-    var cell = GetOrCreate();
-    facing = cell.Infected ? Utils.RotateRight(facing) : Utils.RotateLeft(facing);
+    return state switch
+    {
+        State.Clean => ".",
+        State.Weakened => "W",
+        State.Infected => "#",
+        State.Flagged => "F",
+        _ => throw new Exception(),
+    };
+}
+void Print() => Utils.PrintGrid(grid.Values, x => x.X, x => x.Y, x => EnumPr(x.State), nullPrint: (_, _) => ".");
 
-    cell.Infected = !cell.Infected;
-    if (cell.Infected) { result++; }
+for (var i = 0; i < 10000000; i++)
+{
+    //Utils.Counter("d", expectedTotal: 10000000, timer: true);
+    var cell = GetOrCreate();
+    switch (cell.State)
+    {
+        case State.Clean:
+            facing = Utils.RotateLeft(facing);
+            cell.State = State.Weakened;
+            break;
+        case State.Weakened:
+            cell.State = State.Infected;
+            result++;
+            break;
+        case State.Infected:
+            facing = Utils.RotateRight(facing);
+            cell.State = State.Flagged;
+            break;
+        case State.Flagged:
+            facing = Utils.InverseDirection(facing);
+            cell.State = State.Clean;
+            break;
+        default: throw new Exception();
+    }
 
     var dir = Utils.Directions.Single(x => x.icon == facing);
     x += dir.x;
@@ -68,13 +95,12 @@ for (var i = 0; i < 10000; i++)
 
 Cell GetOrCreate()
 {
-    var cell = grid.SingleOrDefault(c => c.X == x && c.Y == y);
-    if (cell == default)
+    if (!grid.TryGetValue((x, y), out var value))
     {
-        cell = new Cell { X = x, Y = y, Infected = false };
-        grid.Add(cell);
+        value = new Cell { X = x, Y = y, State = State.Clean };
+        grid[(x, y)] = value;
     }
-    return cell;
+    return value;
 }
 
 
@@ -87,5 +113,10 @@ class Cell
 {
     public int X { get; set; }
     public int Y { get; set; }
-    public bool Infected { get; set; }
+    public State State { get; set; }
+}
+
+enum State
+{
+    Clean, Weakened, Infected, Flagged
 }
