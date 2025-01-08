@@ -68,7 +68,7 @@ int Exec()
         f = 1;
     }
 
-    while (true)
+    for (g = -1; g != 0;)
     {
         d = 2;
         for (g = -1; g != 0;)
@@ -77,9 +77,7 @@ int Exec()
 
             for (g = -1; g != 0;)
             {
-                g = d;
-                g *= e; result++;
-                g -= b;
+                g = d * e - b;
 
                 if (g == 0)
                 {
@@ -87,8 +85,9 @@ int Exec()
                 }
 
                 e++;
-                g = e;
-                g -= b;
+                g = e - b;
+
+                result++;
             }
 
             d++;
@@ -104,13 +103,9 @@ int Exec()
         g = b;
         g -= c;
 
-        if (g == 0)
-        {
-            return h;
-        }
         b += 17;
-
     }
+    return h;
 }
 
 
