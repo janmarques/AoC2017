@@ -73,15 +73,12 @@ int Exec()
         d = 2;
         while (d - b != 0)
         {
-            e = 2;
-            while (e - b != 0)
+            for (e = 2; e < b; e++)
             {
                 if (d * e - b == 0)
                 {
                     incH = true;
                 }
-
-                e++;
                 result++;
             }
             d++;
