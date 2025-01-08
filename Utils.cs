@@ -43,6 +43,26 @@ public static class Utils
             _ => throw new NotImplementedException()
         };
 
+    public static char RotateRight(char x)
+    => x switch
+    {
+        'E' => 'S',
+        'W' => 'N',
+        'S' => 'W',
+        'N' => 'E',
+        _ => throw new NotImplementedException()
+    };
+
+    public static char RotateLeft(char x)
+    => x switch
+    {
+        'E' => 'N',
+        'W' => 'S',
+        'S' => 'E',
+        'N' => 'W',
+        _ => throw new NotImplementedException()
+    };
+
     static public void PrintGrid<T>(T[][] grid, Func<T, string> print = null)
     {
         print ??= x => x.ToString();
