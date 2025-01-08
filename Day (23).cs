@@ -70,8 +70,7 @@ int Exec()
 
     while (b - c - 17 != 0)
     {
-        d = 2;
-        while (d - b != 0)
+        for (d = 2; d < b; d++)
         {
             for (e = 2; e < b; e++)
             {
@@ -81,7 +80,6 @@ int Exec()
                 }
                 result++;
             }
-            d++;
         }
 
         if (incH)
