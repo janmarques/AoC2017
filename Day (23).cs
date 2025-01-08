@@ -48,85 +48,121 @@ input = fullInput;
 var timer = System.Diagnostics.Stopwatch.StartNew();
 var result = 0L;
 
-var a = new Machine(input, 0);
-var b = new Machine(input, 1);
-a.Out = b.In;
-b.Out = a.In;
+var registers = new Dictionary<char, long>()
+{
+    { 'a', 1 }
+};
 
-a.Execute();
+int a, b, c, d, e, f, g, h = 0;
+a = 1;
 
-//Task.Run(() => a.Execute());
-//Task.Run(() => b.Execute());
+
+//set b 79
+b = 79;
+
+//set c b
+c = b;
+
+//jnz a 2
+if (a != 0)
+{
+    //jnz 1 5 (skip)
+
+}
+
+//mul b 100
+b *= 100;
+
+//sub b -100000
+b -= -100000;
+
+//set c b
+c = b;
+
+//sub c -17000
+c -= -17000;
+
+//set f 1
+f = 1;
+
+//set d 2
+d = 2;
+
+//set e 2
+e = 2;
+
+//set g d
+g = d;
+
+//mul g e
+g *= e;
+
+//sub g b
+g -= b;
+
+//jnz g 2
+if (g != 0)
+{
+    //set f 0
+    f = 0;
+}
+
+//sub e -1
+e -= 1;
+
+//set g e
+g = e;
+
+//sub g b
+g -= b;
+
+//jnz g -8
+if (g != 0)
+{
+    //todo do while?
+}
+
+//sub d -1
+d -= 1;
+
+//set g d
+g = d;
+
+//sub g b
+g -= b;
+
+//jnz g -13
+if (g == 0)
+{
+    //todo do while?
+}
+
+//jnz f 2
+if (f != 0)
+{
+    //sub h -1
+    h -= 1;
+}
+
+//set g b
+g = b;
+
+//sub g c
+g -= c;
+
+//jnz g 2
+if (g != 0)
+{
+    //jnz 1 3
+    // TODO "return"
+}
+//sub b -17
+b -= -17;
+
+//jnz 1 -23
+// todo while true
 
 timer.Stop();
 Console.WriteLine(result);
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
 Console.ReadLine();
-
-
-class Machine(string input, int processId)
-{
-    public int MulCnt { get; set; }
-    public BlockingCollection<long> Out { get; set; }
-    public BlockingCollection<long> In { get; set; } = new BlockingCollection<long> { };
-
-    public void Execute()
-    {
-        var registers = new Dictionary<char, long>()
-        {
-            { 'p', processId }
-        };
-
-        var lines = input.Split(Environment.NewLine).ToArray();
-        for (long i = 0; i < lines.Length; i++)
-        {
-            Utils.Counter(processId.ToString(), 1_000_000);
-            var line = lines[i];
-            var split = line.Split(" ").ToArray();
-            var register = split[1].Single();
-            var isRegister = char.IsLetter(register);
-            var bValue = long.MinValue;
-            if (split.Length > 2)
-            {
-                if (char.IsLetter(split[2], 0))
-                {
-                    registers.TryGetValue(split[2].Single(), out bValue);
-                }
-                else
-                {
-                    bValue = long.Parse(split[2]);
-                }
-
-            }
-            if (isRegister && !registers.ContainsKey(register))
-            {
-                registers[register] = 0;
-            }
-            var aValue = isRegister ? registers[register] : long.Parse(register.ToString());
-
-
-            switch (split[0])
-            {
-                case "set":
-                    registers[register] = bValue;
-                    break;
-                case "sub":
-                    registers[register] -= bValue;
-                    break;
-                case "mul":
-                    registers[register] *= bValue;
-                    MulCnt++;
-                    Console.WriteLine($"Program {processId} sending {register} {MulCnt}");
-                    break;
-                case "jnz":
-                    if (aValue != 0)
-                    {
-                        i += bValue - 1;
-                    }
-                    break;
-
-                default: throw new Exception();
-            }
-        }
-    }
-}
