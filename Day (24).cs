@@ -81,26 +81,30 @@ var nodes = input.Split(Environment.NewLine).Select(x => x.Split("/").Select(int
 int Strength(Node n) => n.In + n.Out;
 int OpenConnection(Node n, int usedSide) => n.In == usedSide ? n.Out : n.In;
 
-var pq = new PriorityQueue<(Node current, HashSet<Node> unvisited, int openConnection, int strength), int>();
+var pq = new PriorityQueue<(Node current, HashSet<Node> unvisited, int openConnection, int strength, int length), int>();
 foreach (var node in nodes.Where(x => x.In == 0 || x.Out == 0))
 {
-    pq.Enqueue((node, nodes.Where(x => x != node).ToHashSet(), OpenConnection(node, 0), Strength(node)), Strength(node));
+    pq.Enqueue((node, nodes.Where(x => x != node).ToHashSet(), OpenConnection(node, 0), Strength(node), 1), Strength(node));
 }
 
 
+var bridges = new List<(int length, int strength)>();
+
 while (pq.Count > 0)
 {
-    (Node current, HashSet<Node> unvisited, int openConnection, int strength) = pq.Dequeue();
+    (Node current, HashSet<Node> unvisited, int openConnection, int strength, int length) = pq.Dequeue();
 
-    result = Math.Max(result, strength);
+    bridges.Add((length, strength));
 
     foreach (var item in unvisited.Where(x => x.In == openConnection || x.Out == openConnection))
     {
         var newStrength = strength + Strength(item);
-        pq.Enqueue((item, unvisited.Where(x => x != item).ToHashSet(), OpenConnection(item, openConnection), newStrength), newStrength);
+        pq.Enqueue((item, unvisited.Where(x => x != item).ToHashSet(), OpenConnection(item, openConnection), newStrength, length + 1), newStrength);
     }
 
 }
+
+result = bridges.OrderByDescending(x => x.length).ThenByDescending(x => x.strength).First().strength;
 timer.Stop();
 Console.WriteLine(result);
 Console.WriteLine(timer.ElapsedMilliseconds + "ms");
