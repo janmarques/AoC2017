@@ -52,35 +52,33 @@ Console.WriteLine(Exec());
 
 int Exec()
 {
-
-    int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0;
+    int a = 0, b = 0, c = 0, d = 0, e = 0, h = 0;
 
     a = 0;
     b = 79;
     c = b;
+    var incH = true;
 
     if (a != 0)
     {
-        b *= 100; result++;
+        b *= 100;
         b += 100000;
         c = b;
         c += 17000;
-        f = 1;
+        incH = false;
     }
 
-    for (g = -1; g != 0; g = b - c - 17)
+    while (b - c - 17 != 0)
     {
         d = 2;
-        for (g = -1; g != 0; g = d - b)
+        while (d - b != 0)
         {
             e = 2;
-            for (g = -1; g != 0; g = e - b)
+            while (e - b != 0)
             {
-                g = d * e - b;
-
-                if (g == 0)
+                if (d * e - b == 0)
                 {
-                    f = 0;
+                    incH = true;
                 }
 
                 e++;
@@ -89,7 +87,7 @@ int Exec()
             d++;
         }
 
-        if (f == 0)
+        if (incH)
         {
             h++;
         }
