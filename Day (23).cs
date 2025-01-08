@@ -75,7 +75,7 @@ int Exec()
         {
             e = 2;
 
-            do
+            for (g = -1; g != 0;)
             {
                 g = d;
                 g *= e; result++;
@@ -89,7 +89,7 @@ int Exec()
                 e++;
                 g = e;
                 g -= b;
-            } while (g != 0);
+            }
 
             d++;
             g = d;
